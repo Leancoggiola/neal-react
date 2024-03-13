@@ -1,0 +1,15 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../mapping/variables.map' as theme;
+
+@mixin generator($variant) {
+    .nl-theme-#{$variant} {
+        @each $var, $val in theme.$themeVars {
+            --nl-#{$var}: #{$val};
+        }
+
+        @each $var, $val in theme.$baseVars {
+            --#{$var}: #{$val};
+        }
+    }
+}

@@ -1,0 +1,6 @@
+@use '../../common/common' as v;
+
+$variables: (
+    'icon-color': v.$grey-00,
+    'icon--bg-color': transparent,
+)

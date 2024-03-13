@@ -1,0 +1,8 @@
+@forward './common/base';
+@forward './common/colors';
+@forward '../components/components';
+
+@use './common/fonts';
+@use './mixins/generate-var' as theme;
+
+@include theme.generator('dark');

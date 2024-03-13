@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use '../common/base' as b;
+@use './components/icon.map' as icon;
+@use './components/loading-spinner.map' as loadingSpinner;
+
+@function merge($arrs) {
+    $final: ();
+    @each $arr in $arrs {
+        $final: map.merge($final, $arr);
+    }
+    @return $final
+}
+
+$variables: icon.$variables, loadingSpinner.$variables;
+
+$baseVars: (
+    'ease-in-out': b.$ease-in-out,
+    'ease-in-out-fast': b.$ease-in-out-fast,
+    'ease-in-out-expo': b.$ease-in-out-expo
+);
+
+$themeVars: merge($variables);

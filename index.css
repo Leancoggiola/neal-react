@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "nl-breezeSans";
+  src: url("../assets/fonts/BreezeSans-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nl-breezeSans";
+  src: url("../assets/fonts/BreezeSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nl-breezeSans";
+  src: url("../assets/fonts/BreezeSans-Regular.ttf");
+  font-weight: 4;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nl-breezeSans";
+  src: url("../assets/fonts/BreezeSans-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nl-breezeSans";
+  src: url("../assets/fonts/BreezeSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+.nl-theme {
+  --nl-icon-color: #FFF;
+  --nl-icon--bg-color: transparent;
+  --nl-loader--bg-color: rgba(46, 46, 56, 0.3019607843);
+  --nl-loader--border-color: transparent;
+  --nl-loader--border-style: none;
+  --nl-loader--border-width: 0px;
+  --nl-loader-square--bg-color: #FFC107;
+  --nl-loader-square--border-color: transparent;
+  --nl-loader-square--border-style: none;
+  --nl-loader-square--border-width: 0px;
+}
+
+:root {
+  --ease-in-out: 300ms ease-in-out;
+  --ease-in-out-fast: 150ms ease-in-out;
+  --ease-in-out-expo: cubic-bezier(1,0,0,1);
+}

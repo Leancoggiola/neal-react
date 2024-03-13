@@ -1,0 +1,12 @@
+@use '../../common/common' as v;
+
+$variables: (
+  'loader--bg-color': #2E2E384D,
+  'loader--border-color': transparent,
+  'loader--border-style': none,
+  'loader--border-width': 0px,
+  'loader-square--bg-color': #{v.$primary},
+  'loader-square--border-color': transparent,
+  'loader-square--border-style': none,
+  'loader-square--border-width': 0px,
+)
