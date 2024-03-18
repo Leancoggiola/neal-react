@@ -33,6 +33,3 @@ export const previewTheme = create({
     colorSecondary: '#B094DC',
     appBorderColor: "#B094DC",
 })
-
-console.log(themes.light)
-console.log(themes.dark)
