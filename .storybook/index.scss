@@ -1,1 +1,8 @@
 @use '../src/index.scss';
+
+.sbdocs {
+    font-family: 'BreezeSans' !important;
+    tr:nth-of-type(2n) {
+        background: #23232F!important;
+    }
+}

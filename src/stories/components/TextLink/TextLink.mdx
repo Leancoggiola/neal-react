@@ -1,0 +1,14 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as TextLinkStories from './TextLink.stories';
+
+<Meta of={TextLinkStories} name="Overview" />
+
+# NL - Text Link
+
+<Canvas of={TextLinkStories.TextLinkDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlTextLink } from 'neal-react';`} />
+
+<ArgTypes of={TextLinkStories} />

@@ -1,0 +1,112 @@
+// .motif-text-link {
+//   color: var(--text-link--color);
+//   display: inline-flex;
+//   font-size: var(--btn-text-disabled--color);
+//   line-height: 1.25rem;
+//   background: transparent;
+//   font-weight: var(--text-link--font-weight);
+//   outline: none;
+//   position: relative;
+//   text-decoration: none;
+//   align-items: center;
+//   border: none;
+//   padding: 0;
+
+//   .motif-icon {
+//     height: Rem.rem(14);
+//     color: currentcolor;
+
+//     svg {
+//       position: relative;
+//       height: Rem.rem(14);
+//       width: Rem.rem(14);
+//       min-width: Rem.rem(14);
+//       margin-right: Rem.rem(4);
+//     }
+//   }
+
+//   path {
+//     fill: currentcolor;
+//   }
+
+//   &:hover {
+//     cursor: pointer;
+//     border-width: var(--text-link-hover--border-width);
+//     border-style: var(--text-link-hover--border-style);
+//     border-color: var(--text-link-hover--color);
+//     --text-link--color: var(--text-link-hover--color);
+//   }
+
+//   &:focus-visible {
+//     --text-link--color: var(--text-link-focus--color);
+//     border-width: var(--text-link-focus--border-width);
+//     border-style: var(--text-link-focus--border-style);
+//     border-color: var(--text-link-focus--color);
+//     border-radius: var(--text-link-focus--border-radius);
+//     outline-width: var(--text-link-focus--outline-width);
+//     outline-style: var(--text-link-focus--outline-style);
+//     outline-color: var(--text-link-focus--outline-color);
+//     outline-offset: var(--text-link-focus--outline-offset);
+//     box-sizing: border-box;
+//   }
+
+//   &:visited {
+//     --text-link--color: var(--text-link-visited--color);
+//   }
+
+//   &.motif-text-link-disabled {
+//     --text-link--color: var(--text-link-disabled--color);
+
+//     &:focus-visible,
+//     &:hover {
+//       --text-link--color: var(--text-link-disabled--color);
+
+//       text-decoration: none;
+//       border-bottom: none;
+//       cursor: not-allowed;
+//     }
+//   }
+
+//   &.motif-active {
+//     font-weight: var(--weight-bold);
+//     border-bottom: 2px solid currentcolor;
+//     --text-link--color: var(--text-link-active--color);
+//   }
+// }
+
+// .motif-text-link-alt {
+//   color: var(--text-link-alt--color);
+
+//   &:hover {
+//     cursor: pointer;
+//     border-width: var(--text-link-alt-hover--border-width);
+//     border-style: var(--text-link-alt-hover--border-style);
+//     border-color: var(--text-link-alt-hover--color);
+//     --text-link-alt--color: var(--text-link-alt-hover--color);
+//   }
+
+//   &:focus-visible {
+//     --text-link-alt--color: var(--text-link-alt-focus--color);
+//     border-width: var(--text-link-alt-focus--border-width);
+//     border-style: var(--text-link-alt-focus--border-style);
+//     border-color: var(--text-link-alt-hover--color);
+//     border-radius: var(--text-link-alt-focus--border-radius);
+//     outline-width: var(--text-link-alt-focus--outline-width);
+//     outline-style: var(--text-link-alt-focus--outline-style);
+//     outline-color: var(--text-link-alt-focus--outline-color);
+//     outline-offset: var(--text-link-alt-focus--outline-offset);
+//     box-sizing: border-box;
+//   }
+
+//   &:visited {
+//     --text-link-alt--color: var(--text-link-alt-visited--color);
+//   }
+
+//   &.motif-text-link-disabled {
+//     --text-link-alt--color: var(--text-link-alt-disabled--color);
+//   }
+
+//   &.motif-active {
+//     --text-link-alt--color: var(--text-link-alt-active--color);
+//   }
+// }

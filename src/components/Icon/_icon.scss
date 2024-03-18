@@ -1,11 +1,6 @@
 .nl-icon {
-    color: var(--icon-color);
-    background-color: var(--icon--bg-color);
-  }
-  
-  .nl-icon-src {
-    svg {
-      fill: currentColor;
-    }
-  }
+  color: var(--nl-icon-color);
+  background-color: var(--nl-icon--bg-color);
+  fill: currentColor;
+}
   

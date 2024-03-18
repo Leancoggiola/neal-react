@@ -20,10 +20,10 @@
 | [Footer](/docs/components-footer--overview)                           | ✅     | ❌          | 1.0.0       |
 | [Form Field](/docs/components-form-field--overview)                   | ✅     | ❌          | 1.0.0       |
 | [Header](/docs/components-header--overview)                           | ✅     | ❌          | 1.0.0       |
-| [Icon](/docs/components-icon--overview)                               | ✅     | ❌          | 1.0.0       |
+| [Icon](/docs/components-icon--overview)                               | ✅     | ✅          | 1.0.0       |
 | [Inline Message](/docs/components-inline-message--overview)           | ✅     | ❌          | 1.0.0       |
 | [Input](/docs/components-input--overview)                             | ✅     | ❌          | 1.0.0       |
-| [Loading Spinner](/docs/components-loading-spinner--overview)         | ✅     | ❌          | 1.0.0       |
+| [Loading Spinner](/docs/components-loading-spinner--overview)         | ✅     | ✅          | 1.0.0       |
 | [Menu](/docs/components-menu--overview)                               | ✅     | ❌          | 1.0.0       |
 | [Modal](/docs/components-modal--overview)                             | ✅     | ❌          | 1.0.0       |
 | [Numeric Input](/docs/components-numeric-input--overview)             | ✅     | ❌          | 1.0.0       |
