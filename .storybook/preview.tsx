@@ -1,11 +1,10 @@
+import type { Preview } from '@storybook/react';
+import React from 'react';
 import { NlThemeProvider } from '../src/components';
 import './index.scss';
 
-import { ArgTypes, Description, Primary, Stories, Subtitle, Title } from '@storybook/blocks';
-
-const preview = {
+const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on(?!Label)[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -14,7 +13,7 @@ const preview = {
     },
   },
   decorators: [
-    (Story) => {
+    Story => {
       return (
         <>
           <NlThemeProvider variant={'dark'} />
