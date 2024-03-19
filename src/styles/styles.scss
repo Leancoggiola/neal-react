@@ -2,7 +2,7 @@
 @forward './common/colors';
 @forward '../components/components';
 
-@use './common/fonts.css';
 @use './mixins/generate-var' as theme;
+@use './common/fonts.css';
 
 @include theme.generator('dark');
