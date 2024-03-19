@@ -1,0 +1,19 @@
+@use '../../common/common' as v;
+
+$variables: (
+    'text-link--color': #{v.$purple-300},
+    'text-disabled--color': '',
+    'text-link--font-weight': 400,
+    'text-link-hover--color': #{v.$purple-300},
+    'text-link-hover--border-width': 0 0 1px 0,
+    'text-link-hover--border-style': solid,
+    'text-link-focus--color': #{v.$purple-300},
+    'text-link-focus--border-width': 0,
+    'text-link-focus--border-style': none,
+    'text-link-focus--border-radius': 4px,
+    'text-link-focus--outline-color': #{v.$grey-00},
+    'text-link-focus--outline-width': 1.5px,
+    'text-link-focus--outline-style': solid,
+    'text-link-focus--outline-offset': 1.5px,
+    'text-link-disabled--color': #{v.$grey-300}
+)

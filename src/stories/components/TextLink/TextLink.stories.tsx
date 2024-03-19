@@ -13,10 +13,6 @@ const meta: Meta<typeof NlTextLink> = {
       description: 'Set disabled behaviour',
       type: { name: 'boolean', required: false },
     },
-    variant: {
-      description: 'Set style variant',
-      type: { name: 'string', required: false },
-    },
     className: {
       description: 'Custom class to add or modified to the component styles.',
       type: { name: 'string', required: false },
@@ -38,7 +34,6 @@ export const TextLinkDefault: Story = {
   args: {
     children: 'Text Link',
     href: '',
-    variant: 'default',
     disabled: false,
   },
 };

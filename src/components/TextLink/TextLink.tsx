@@ -3,10 +3,9 @@ import classNames from 'classnames';
 
 import { TextLinkProps } from './TextLink.types';
 
-export const NlTextLink: React.FC<TextLinkProps> = ({href, children, variant, disabled, className}) => {
+export const NlTextLink: React.FC<TextLinkProps> = ({href, children, disabled, className}) => {
   const classes = classNames({
     'nl-text-link': true,
-    'nl-text-link-alt': variant === 'alt',
     'nl-text-link-disabled': disabled,
     className: className,
   });

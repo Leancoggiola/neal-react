@@ -1,7 +1,10 @@
 @use 'sass:map';
 @use '../common/base' as b;
+
+// Components
 @use './components/icon.map' as icon;
 @use './components/loading-spinner.map' as loadingSpinner;
+@use './components/text-link.map' as textLink;
 
 @function merge($arrs) {
     $final: ();
@@ -11,12 +14,15 @@
     @return $final
 }
 
-$variables: icon.$variables, loadingSpinner.$variables;
+$variables: icon.$variables, loadingSpinner.$variables, textLink.$variables;
 
 $baseVars: (
+    'primary-font': 'BreezeSans',
     'ease-in-out': b.$ease-in-out,
     'ease-in-out-fast': b.$ease-in-out-fast,
-    'ease-in-out-expo': b.$ease-in-out-expo
+    'ease-in-out-expo': b.$ease-in-out-expo,
+    'font-size': 16px,
+    'weight-bold': 700
 );
 
 $themeVars: merge($variables);
