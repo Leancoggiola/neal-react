@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from "@storybook/react";
-import { NlTextLink } from "../../../components/TextLink";
+import { NlTextLink } from "../../../components/TextLink/Index";
 
 const meta: Meta<typeof NlTextLink> = {
   title: 'Components/Text Link',

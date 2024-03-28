@@ -6,7 +6,7 @@
 | [Avatar](/docs/components-avatar--overview)                           | ✅     | ❌          | 1.0.0       |
 | [Badge](/docs/components-badge--overview)                             | ✅     | ❌          | 1.0.0       |
 | [Breadcrumb](/docs/components-breadcrumb--overview)                   | ✅     | ❌          | 1.0.0       |
-| [Button](/docs/components-button--overview)                           | ✅     | ❌          | 1.0.0       |
+| [Button](/docs/components-button--overview)                           | ✅     | ✅          | 1.0.0       |
 | [Card](/docs/components-card--overview)                               | ✅     | ❌          | 1.0.0       |
 | [Carousel](/docs/components-carousel--overview)                       | ✅     | ❌          | 1.0.0       |
 | [Checkbox](/docs/components-checkbox--overview)                       | ✅     | ❌          | 1.0.0       |
@@ -40,7 +40,7 @@
 | [Tab Navigation](/docs/components-tab-navigation--overview)           | ✅     | ❌          | 1.0.0       |
 | [Table](/docs/components-table--overview)                             | ✅     | ❌          | 1.0.0       |
 | [Text Area](/docs/components-text-area--overview)                     | ✅     | ❌          | 1.0.0       |
-| [Text Link](/docs/components-text-link--overview)                     | ✅     | ❌          | 1.0.0       |
+| [Text Link](/docs/components-text-link--overview)                     | ✅     | ✅          | 1.0.0       |
 | [ThemeProvider](/docs/components-theme-provider--overview)            | ✅     | ❌          | 1.0.0       |
 | [Time Input](/docs/components-time-input--overview)                   | ✅     | ❌          | 1.0.0       |
 | [Toast](/docs/components-toast--overview)                             | ✅     | ❌          | 1.0.0       |
