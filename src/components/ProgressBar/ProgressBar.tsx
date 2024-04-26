@@ -3,24 +3,24 @@ import React, { useMemo } from 'react';
 import { ProgressBarProps } from './ProgressBar.types';
 
 export const NlProgressBar: React.FC<ProgressBarProps> = ({
-    circle = false, 
-    isIndeterminate = false, 
-    value= isIndeterminate ? 25 : 0, 
-    error = false,
-    hideLabel = false,
-    processStateLabel = 'Processing...', 
-    resultStateLabel = 'Completed',
-    labelPosition = 'default',
-    className = ''
-  }) => {
+  circle = false,
+  isIndeterminate = false,
+  value = isIndeterminate ? 25 : 0,
+  error = false,
+  hideLabel = false,
+  processStateLabel = 'Processing...',
+  resultStateLabel = 'Completed',
+  labelPosition = 'default',
+  className = ''
+}) => {
 
   const wrapperClasses = classNames({
     'nl-progress-bar-wrapper': true,
     'nl-progress-bar-wrapper-circle': circle,
-    [`nl-progress-bar-label-${labelPosition}`]:  !circle,
+    [`nl-progress-bar-label-${labelPosition}`]: !circle,
     [className]: true
   });
-  
+
   const labelClasses = classNames({
     'nl-progress-bar-label': true,
     'nl-progress-bar-label-hidden': hideLabel,
@@ -34,11 +34,11 @@ export const NlProgressBar: React.FC<ProgressBarProps> = ({
   });
 
   const renderProgressBar = () => {
-    const progressClasses = classNames({'nl-progress': true,});
+    const progressClasses = classNames({ 'nl-progress': true, });
     return <div className={progressClasses} style={isIndeterminate ? {} : { width: `${value}%` }} />;
   };
 
-  let progressValue:string;
+  let progressValue: string;
 
   if (value >= 100) {
     progressValue = '360';
@@ -67,7 +67,7 @@ export const NlProgressBar: React.FC<ProgressBarProps> = ({
         strokeDashoffset={progressValue}
       />
     </svg>
-  ),[value, error, isIndeterminate]);
+  ), [value, error, isIndeterminate]);
 
   return (
     <div className={wrapperClasses} role="progressbar">

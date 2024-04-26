@@ -29,7 +29,7 @@
 | [Numeric Input](/docs/components-numeric-input--overview)             | ✅     | ❌          | 1.0.0       |
 | [Pagination](/docs/components-pagination--overview)                   | ✅     | ❌          | 1.0.0       |
 | [Pin Entry](/docs/components-pin-entry--overview)                     | ✅     | ❌          | 1.0.0       |
-| [Progress Bar](/docs/components-progress-bar--overview)               | ✅     | ❌          | 1.0.0       |
+| [Progress Bar](/docs/components-progress-bar--overview)               | ✅     | ✅          | 1.0.0       |
 | [Progress Indicator](/docs/components-progress-indicator--overview)   | ✅     | ❌          | 1.0.0       |
 | [Radio Button](/docs/components-radio-button--overview)               | ✅     | ❌          | 1.0.0       |
 | [Rich Text Editor ](/docs/components-rich-text-editor--overview)      | ✅     | ❌          | 1.0.0       |

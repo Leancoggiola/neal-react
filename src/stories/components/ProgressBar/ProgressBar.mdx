@@ -1,0 +1,14 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as ProgressBarStories from './ProgressBar.stories';
+
+<Meta of={ProgressBarStories} name="Overview" />
+
+# NL - Progress Bar
+
+<Canvas of={ProgressBarStories.ProgressBarDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlProgressBar } from 'neal-react';`} />
+
+<ArgTypes of={ProgressBarStories} />

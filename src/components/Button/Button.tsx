@@ -3,7 +3,7 @@ import { Children, forwardRef, isValidElement } from 'react';
 import { hardwareIcKeyboardArrowLeft, hardwareIcKeyboardArrowRight } from '../../assets/icons';
 import { NlIcon } from '../Icon';
 import { ButtonProps } from './Button.types';
-import { NlProgressBar } from '../ProgressBar/Index';
+import { NlProgressBar } from '../ProgressBar';
 
 const defaultIcons = {
   previous: hardwareIcKeyboardArrowLeft,
@@ -11,14 +11,15 @@ const defaultIcons = {
 };
 
 
-export const NlButton = forwardRef<HTMLButtonElement,ButtonProps>(({children, onClick, type, size = 'small', warn, variant, className='', disabled, loading, progress, stepper }, ref) => {
-  
+export const NlButton = forwardRef<HTMLButtonElement, ButtonProps>(({ children, onClick, type, size = 'small', warn, variant, className = '', disabled, loading, progress, stepper }, ref) => {
+
   const hasSingleIconChild = Children.count(children) === 1 && isValidElement(children) && children.type === NlIcon;
   const isIndeterminate = loading && !progress;
 
   const classes = classNames({
     [`nl-button-stepper-${stepper}`]: children && stepper,
     [`nl-button nl-button-${variant}`]: true,
+    'nl-button-loader': loading,
     [`nl-button-${size}`]: size,
     ['nl-button-warn']: warn,
     'nl-button-icon-only': hasSingleIconChild,

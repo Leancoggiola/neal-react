@@ -4,6 +4,7 @@
 // Components
 @use './components/icon.map' as icon;
 @use './components/loading-spinner.map' as loadingSpinner;
+@use './components/progress-bar.map' as progressMap;
 @use './components/text-link.map' as textLink;
 
 @function merge($arrs) {
@@ -14,15 +15,20 @@
     @return $final
 }
 
-$variables: icon.$variables, loadingSpinner.$variables, textLink.$variables;
+$variables: 
+    icon.$variables, 
+    loadingSpinner.$variables,
+    progressMap.$variables,
+    textLink.$variables;
 
 $baseVars: (
     'primary-font': 'BreezeSans',
+    'font-size': 16px,
+    'weight-bold': 700,
+
     'ease-in-out': b.$ease-in-out,
     'ease-in-out-fast': b.$ease-in-out-fast,
     'ease-in-out-expo': b.$ease-in-out-expo,
-    'font-size': 16px,
-    'weight-bold': 700
 );
 
 $themeVars: merge($variables);

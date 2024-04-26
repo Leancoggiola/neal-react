@@ -1,0 +1,118 @@
+.nl-progress-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  &.nl-progress-bar-label-top {
+    .nl-progress-bar-label { align-self: flex-end }
+  }
+
+  &.nl-progress-bar-label-bottom {
+    flex-direction: column-reverse;
+    .nl-progress-bar-label { align-self: flex-end }
+  }
+
+  &.nl-progress-bar-label-right {
+    flex-direction: row-reverse;
+    align-items: center;
+    .nl-progress-bar-label {
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+  }
+
+  &.nl-progress-bar-wrapper-circle {
+    justify-content: center;
+    align-items: center;
+    width: var(--nl-progress-bar-circle--width);
+    height: var(--nl-progress-bar-circle--height);
+  }
+
+  .nl-progress-bar-label {
+    font-size: var(--font-size);
+    font-weight: var(--nl-progress-bar-label--font-weight);
+    color: var(--nl-progress-bar-label--color);
+  }
+
+  .nl-progress-bar-label-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+  }
+
+  .nl-progress-bar {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--nl-progress-bar--bg-color);
+    border-radius: var(--nl-progress-bar--border-radius);
+    box-shadow: var(--nl-progress-bar--box-shadow);
+    width: 100%;
+    height: 0.25rem;
+
+    &.nl-progress-bar-indeterminate {
+      .nl-progress {
+        animation: translate 1.5s infinite linear;
+        position: relative;
+        width: 25%;
+      }
+    }
+
+    &.nl-progress-bar-circle {
+      position: absolute;
+      background-color: transparent;
+      width: var(--nl-progress-bar-circle--width);
+      height: var(--nl-progress-bar-circle--height);
+      &.nl-progress-bar-indeterminate {
+        animation: rotation 1s infinite linear;
+      }
+    }
+  }
+
+  .nl-progress {
+    inset: 0;
+    position: absolute;
+    background-color: var(--nl-progress-bar-progress--bg-color);
+    border-radius: var(--nl-progress-bar-progress--border-radius);
+    height: 0.25rem;
+  }
+  .nl-progress-error {
+    --nl-progress-bar-progress--bg-color: var(--nl-progress-bar-error-progress--bg-color);
+  }
+  .nl-progress-bar-circle {
+    position: relative;
+    width: var(--nl-progress-bar-circle--width);
+    height: var(--nl-progress-bar-circle--height);
+
+    svg {
+      path {
+        stroke-linecap: var(--nl-progress-bar-circle--stroke-linecap);
+        stroke-width: var(--nl-progress-bar-circle--border-width);
+        &:first-of-type { stroke: var(--nl-progress-bar-circle-outer--border-color) }
+        &:last-of-type { stroke: var(--nl-progress-bar-circle--border-color) }
+      }
+    }
+
+    &.nl-progress-error {
+      --nl-progress-bar-circle--border-color: var(--nl-progress-bar-error-progress--bg-color);
+    }
+  }
+}
+
+@keyframes rotation {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(359deg) }
+}
+
+@keyframes translate {
+  0% { left: -25% }
+  20% { left: 0 }
+  40% { left: 33% }
+  60% { left: 66% }
+  80% { left: 100% }
+  100% { left: 125% }
+}
