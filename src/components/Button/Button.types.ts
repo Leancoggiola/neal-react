@@ -7,8 +7,8 @@ export interface ButtonProps {
     size?: 'small' | 'medium' | 'large';
     variant?: 'primary' | 'secondary';
     warn?: boolean;
-    className?: string;
     disabled?: boolean;
+    className?: string;
     loading?: boolean;
     progress?: number;
     stepper?: 'prev' | 'next' | null;

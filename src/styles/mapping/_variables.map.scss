@@ -2,6 +2,7 @@
 @use '../common/base' as b;
 
 // Components
+@use './components/button.map' as button;
 @use './components/icon.map' as icon;
 @use './components/loading-spinner.map' as loadingSpinner;
 @use './components/progress-bar.map' as progressMap;
@@ -15,7 +16,8 @@
     @return $final
 }
 
-$variables: 
+$variables:
+    button.$variables,
     icon.$variables, 
     loadingSpinner.$variables,
     progressMap.$variables,

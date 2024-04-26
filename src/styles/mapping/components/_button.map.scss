@@ -1,0 +1,60 @@
+@use '../../common/common' as v;
+
+$variables: (
+    // Base
+    'btn--border-radius': #{v.$border-radius},
+    'btn--border-color': #{v.$grey-900},
+    'btn--border-width': #{v.$grey-900},
+    'btn--border-style': #{v.$grey-900},
+    // Primary variant style
+    'btn-primary--color': #{v.$grey-900},
+    'btn-primary--bg-color': #{v.$grey-00},
+    'btn-primary-icon--color': #{v.$grey-900},
+    'btn-loader-primary-progress--bg-color': #{v.$purple-700},
+
+    'btn-primary-active--bg-color': #{v.$grey-200},
+    'btn-primary-active--border-color': #{v.$grey-200},
+
+    'btn-primary-hover--bg-color': #{v.$grey-100},
+    'btn-primary-hover--border-color': #{v.$grey-100},
+
+    'btn-primary-disabled--color': #{v.$grey-500},
+    'btn-primary-disabled--bg-color': #{v.$grey-900},
+    'btn-primary-disabled--border-color': #{v.$grey-900},
+    'btn-primary-disabled-icon--color': #{v.$grey-500},
+    'btn-loader-primary-disabled-progress--bg-color': #{v.$grey-500},
+    // Secondary variant style
+    'btn-secondary--color': #{v.$grey-50},
+    'btn-secondary--bg-color': #{v.$grey-900},
+    'btn-secondary-icon--color': #{v.$grey-50},
+    'btn-loader-secondary-progress--bg-color': #{v.$purple-700},
+
+    'btn-secondary-active--bg-color': #{v.$grey-700},
+    'btn-secondary-active--border-color': #{v.$grey-700},
+
+    'btn-secondary-hover--bg-color': #{v.$grey-800},
+    'btn-secondary-hover--border-color': #{v.$grey-800},
+
+    'btn-secondary-disabled--color': #{v.$grey-500},
+    'btn-secondary-disabled--bg-color': transparent,
+    'btn-secondary-disabled--border-color': #{v.$grey-300},
+    'btn-secondary-disabled-icon--color': #{v.$grey-500},
+    'btn-loader-secondary-disabled-progress--bg-color': #{v.$grey-300},
+    // Warn variant style
+    'btn-warn--color': #{v.$grey-900},
+    'btn-warn--bg-color': #{v.$warning},
+    'btn-warn-icon--color': #{v.$grey-900},
+    'btn-loader-warn-progress--bg-color': #{v.$warning},
+
+    'btn-warn-active--bg-color': #{v.$yellow-600},
+    'btn-warn-active--border-color': #{v.$yellow-600},
+
+    'btn-warn-hover--bg-color': #{v.$yellow-500},
+    'btn-warn-hover--border-color': #{v.$yellow-500},
+    
+    // Focus
+    'btn-focus--outline-style': solid,
+    'btn-focus--outline-color': #{v.$blue-200},
+    'btn-focus--outline-width': 0.125rem,
+    'btn-focus--outline-offset': 0.125rem,
+)
