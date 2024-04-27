@@ -21,6 +21,7 @@
 | [Form Field](/docs/components-form-field--overview)                   | ✅     | ❌          | 1.0.0       |
 | [Header](/docs/components-header--overview)                           | ✅     | ❌          | 1.0.0       |
 | [Icon](/docs/components-icon--overview)                               | ✅     | ✅          | 1.0.0       |
+| [Icon Button](/docs/components-icon-button--overview)                 | ✅     | ✅          | 1.0.0       |
 | [Inline Message](/docs/components-inline-message--overview)           | ✅     | ❌          | 1.0.0       |
 | [Input](/docs/components-input--overview)                             | ✅     | ❌          | 1.0.0       |
 | [Loading Spinner](/docs/components-loading-spinner--overview)         | ✅     | ✅          | 1.0.0       |
