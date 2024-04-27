@@ -3,6 +3,7 @@
 
 // Components
 @use './components/button.map' as button;
+@use './components/icon-button.map' as iconButton;
 @use './components/icon.map' as icon;
 @use './components/loading-spinner.map' as loadingSpinner;
 @use './components/progress-bar.map' as progressMap;
@@ -19,6 +20,7 @@
 $variables:
     button.$variables,
     icon.$variables, 
+    iconButton.$variables, 
     loadingSpinner.$variables,
     progressMap.$variables,
     textLink.$variables;

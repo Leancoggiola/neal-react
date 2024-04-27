@@ -1,0 +1,35 @@
+.nl-icon-button {
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  box-shadow: none;
+  padding: 0;
+
+  .nl-icon {
+    background: var(--nl-btn-icon--bg-color);
+    border: none;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      color: var(--nl-btn-icon--color);
+    }
+  }
+
+  &:active { background: var(--nl-btn-icon-active--bg-color) }
+  &:hover { background: var(--nl-btn-icon-hover--bg-color) }
+  &:focus-visible {
+    outline-style: var(--nl-btn-icon-focus--outline-style);
+    outline-color: var(--nl-btn-icon-focus--outline-color);
+    outline-width: var(--nl-btn-icon-focus--outline-width);
+    outline-offset: var(--nl-btn-icon-focus--outline-offsetbtn-icon-focus--outline-offset);
+  }
+  &:disabled { background: var(--nl-btn-icon-disabled--bg-color) }
+
+  // Sizes
+  &-medium { padding: 0.25rem }
+  &-large { padding: 0.5rem }
+}

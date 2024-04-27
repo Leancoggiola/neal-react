@@ -23,7 +23,7 @@ export const NlButton = forwardRef<HTMLButtonElement, ButtonProps>(({ children, 
     [`nl-button-${size}`]: size,
     ['nl-button-warn']: warn,
     'nl-button-icon-only': hasSingleIconChild,
-    [className]: className,
+    [className]: true,
   });
 
   return (
