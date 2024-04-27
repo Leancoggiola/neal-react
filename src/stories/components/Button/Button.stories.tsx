@@ -1,5 +1,6 @@
 import { StoryObj, Meta } from "@storybook/react";
-import { NlButton } from "../../../components/Button";
+import { NlButton, NlIcon } from "../../../components";
+import { actionIcAlarm } from "../../../assets/icons";
 
 const meta: Meta<typeof NlButton> = {
   title: 'Components/Button',
@@ -82,4 +83,24 @@ export const ButtonDefault: Story = {
     size: 'small',
     variant: 'primary',
   },
+  parameters: {
+    controls: {
+      exclude: ["onClick"]
+    }
+  }
+};
+
+export const ButtonOnlyIcon: Story = {
+  args: {
+    children: <NlIcon src={actionIcAlarm} />,
+    onClick: () => alert('Alarm set'),
+    type: 'button',
+    size: 'small',
+    variant: 'primary',
+  },
+  parameters: {
+    controls: {
+      exclude: ["children", "stepper", "loading", "progress", "onClick"]
+    }
+  }
 };
