@@ -1,0 +1,52 @@
+.nl-button-group {
+  display: flex;
+  align-items: center;
+
+  .nl-button {
+    border-color: var(--nl-btn-group--border-color);
+    border-radius: var(--nl-btn-group--border-radius);
+    border-style: solid;
+    border-width: 1px;
+    border-left-width: 0;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+
+    &:focus-visible {
+      outline-style: var(--nl-btn-group-focus--outline-style);
+      outline-color: var(--nl-btn-group-focus--outline-color);
+      outline-width: var(--nl-btn-group-focus--outline-width);
+      outline-offset: var(--nl-btn-group-focus--outline-offset);
+      z-index: 1000;
+    }
+    &:first-child {
+      border-radius: var(--nl-btn-group--border-radius-left);
+      border-left-width: 1px;
+    }
+    &:last-child {
+      border-radius: var(--nl-btn-group--border-radius-right);
+    }
+  }
+
+  &-ghost .nl-button {
+    color: var(--nl-btn-group-ghost--color);
+    background-color: var(--nl-btn-group-ghost--bg-color);
+    border-style: none;
+    .nl-icon svg { 
+      --nl-btn-primary-icon--color: var(--nl-btn-group-ghost-icon--color);
+      --nl-btn-secondary-icon--color: var(--nl-btn-group-ghost-icon--color);
+    }
+
+    &:active { background-color: var(--nl-btn-group-ghost-active--bg-color) }
+    &:hover { background-color: var(--nl-btn-group-ghost-hover--bg-color) }
+  }
+
+  &-small .nl-button { height: 2.25rem }
+  &-medium .nl-button { 
+    height: 2.5rem;
+    padding: 0.75rem 1rem;
+  }
+  &-large .nl-button { 
+    height: 2.75rem;
+    padding: 0.875rem 1rem;
+  }
+}

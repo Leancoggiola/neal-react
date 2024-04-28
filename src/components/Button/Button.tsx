@@ -11,7 +11,7 @@ const defaultIcons = {
 };
 
 
-export const NlButton = forwardRef<HTMLButtonElement, ButtonProps>(({ children, onClick, type, size = 'small', warn, variant, className = '', disabled, loading, progress, stepper }, ref) => {
+export const NlButton = forwardRef<HTMLButtonElement, ButtonProps>(({ children, onClick, type, size = 'small', warn, variant = 'primary', className = '', disabled, loading, progress, stepper }, ref) => {
 
   const hasSingleIconChild = Children.count(children) === 1 && isValidElement(children) && children.type === NlIcon;
   const isIndeterminate = loading && !progress;

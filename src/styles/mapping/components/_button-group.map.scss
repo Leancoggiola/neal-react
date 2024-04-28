@@ -1,0 +1,21 @@
+@use '../../common/common' as v;
+
+$variables: (
+    'btn-group--border-color': #{v.$grey-700},
+    'btn-group--border-radius': 0,
+    'btn-group--border-radius-left': 0.25rem 0 0 0.25rem,
+    'btn-group--border-radius-right': 0 0.25rem 0.25rem 0,
+
+    'btn-group-ghost--color': #{v.$grey-400},
+    'btn-group-ghost--bg-color': transparent,
+    'btn-group-ghost-icon--color': #{v.$grey-400},
+
+    'btn-group-ghost-active--bg-color': #{v.$grey-800},
+    'btn-group-ghost-hover--bg-color': #{v.$grey-900},
+
+    // Focus
+    'btn-group-focus--outline-style': solid,
+    'btn-group-focus--outline-color': #{v.$blue-200},
+    'btn-group-focus--outline-width': 0.125rem,
+    'btn-group-focus--outline-offset': 0.125rem,
+)

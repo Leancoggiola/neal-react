@@ -3,6 +3,7 @@
 
 // Components
 @use './components/button.map' as button;
+@use './components/button-group.map' as buttonGroup;
 @use './components/fab-button.map' as fabButton;
 @use './components/icon-button.map' as iconButton;
 @use './components/icon.map' as icon;
@@ -20,6 +21,7 @@
 
 $variables:
     button.$variables,
+    buttonGroup.$variables,
     fabButton.$variables, 
     icon.$variables, 
     iconButton.$variables, 
