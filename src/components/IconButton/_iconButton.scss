@@ -25,9 +25,13 @@
     outline-style: var(--nl-btn-icon-focus--outline-style);
     outline-color: var(--nl-btn-icon-focus--outline-color);
     outline-width: var(--nl-btn-icon-focus--outline-width);
-    outline-offset: var(--nl-btn-icon-focus--outline-offsetbtn-icon-focus--outline-offset);
+    outline-offset: var(--nl-btn-icon-focus--outline-offset);
   }
-  &:disabled { background: var(--nl-btn-icon-disabled--bg-color) }
+  &:disabled { 
+    cursor: not-allowed;
+    pointer-events: none;
+    --nl-btn-icon--color: var(--nl-btn-icon-disabled--color)
+  }
 
   // Sizes
   &-medium { padding: 0.25rem }

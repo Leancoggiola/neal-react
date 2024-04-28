@@ -15,6 +15,7 @@
 | [Content Switcher](/docs/components-content-switcher--overview)       | ✅     | ❌          | 1.0.0       |
 | [Date Picker](/docs/components-date-picker--overview)                 | ✅     | ❌          | 1.0.0       |
 | [Dropdown](/docs/components-dropdown--overview)                       | ✅     | ❌          | 1.0.0       |
+| [Fab Button](/docs/components-fab-button--overview)                   | ✅     | ✅          | 1.0.0       |
 | [File Uploader](/docs/components-file-uploader--overview)             | ✅     | ❌          | 1.0.0       |
 | [Filters](/docs/components-filters--overview)                         | ✅     | ❌          | 1.0.0       |
 | [Footer](/docs/components-footer--overview)                           | ✅     | ❌          | 1.0.0       |

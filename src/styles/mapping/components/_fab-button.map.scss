@@ -1,0 +1,19 @@
+@use '../../common/common' as v;
+
+$variables: (
+    // Primary variant style
+    'btn-fab--bg-color': #{v.$grey-100},
+    'btn-fab--border-color': #{v.$grey-00},
+    'btn-fab-icon--color': #{v.$grey-1000},
+
+    'btn-fab-active--bg-color': #{v.$grey-300},
+    'btn-fab-hover--bg-color': #{v.$grey-200},
+    'btn-fab-disabled--color': #{v.$grey-300},
+    'btn-fab-disabled--bg-color': #{v.$grey-800},
+
+    // Focus
+    'btn-fab-focus--outline-style': solid,
+    'btn-fab-focus--outline-color': #{v.$blue-200},
+    'btn-fab-focus--outline-width': 0.125rem,
+    'btn-fab-focus--outline-offset': 0.125rem,
+)

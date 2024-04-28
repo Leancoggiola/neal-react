@@ -1,0 +1,51 @@
+.nl-fab {
+  position: relative;
+  cursor: pointer;
+
+  background: var(--nl-btn-fab--bg-color);
+  border-color: var(--nl-btn-fab--border-color);
+  border-radius: 50%;
+  border-style: none;
+  border-width: 0;
+  box-shadow: none;
+
+  transition: color var(--ease-in-out-fast), background-color var(--ease-in-out-fast);
+
+  padding: 0.75rem;
+
+  .nl-icon {
+    svg {
+      display: block;
+      color: var(--nl-btn-fab-icon--color);
+    }
+  }
+
+  &:active { background: var(--nl-btn-fab-active--bg-color) }
+  &:hover { background: var(--nl-btn-fab-hover--bg-color) }
+  &:focus-visible {
+    outline-style: var(--nl-btn-fab-focus--outline-style);
+    outline-color: var(--nl-btn-fab-focus--outline-color);
+    outline-width: var(--nl-btn-fab-focus--outline-width);
+    outline-offset: var(--nl-btn-fab-focus--outline-offset);
+  }
+  &:disabled { 
+    cursor: not-allowed;
+    pointer-events: none;
+    --nl-btn-fab-icon--color: var(--nl-btn-fab-disabled--color);
+    --nl-btn-fab--bg-color: var(--nl-btn-fab-disabled--bg-color);
+  }
+
+  // Sizes
+  &-small { 
+    .nl-icon svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  &-medium { 
+    .nl-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as FabButtonStories from './FabButton.stories';
+
+<Meta of={FabButtonStories} name="Overview" />
+
+# NL - Fab Button
+
+<Canvas of={FabButtonStories.FabButtonDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlFabButton } from 'neal-react';`} />
+
+<ArgTypes of={FabButtonStories} />

@@ -3,6 +3,7 @@
 
 // Components
 @use './components/button.map' as button;
+@use './components/fab-button.map' as fabButton;
 @use './components/icon-button.map' as iconButton;
 @use './components/icon.map' as icon;
 @use './components/loading-spinner.map' as loadingSpinner;
@@ -19,6 +20,7 @@
 
 $variables:
     button.$variables,
+    fabButton.$variables, 
     icon.$variables, 
     iconButton.$variables, 
     loadingSpinner.$variables,
