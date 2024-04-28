@@ -3,7 +3,7 @@ import { NlButton, NlIcon } from "../../../components";
 import { actionIcAlarm } from "../../../assets/icons";
 
 const meta: Meta<typeof NlButton> = {
-  title: 'Components/Button',
+  title: 'Components/Button/Button',
   component: NlButton,
   argTypes: {
     // Behaviour
