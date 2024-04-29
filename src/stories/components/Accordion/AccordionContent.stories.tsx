@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { NlAccordionContent } from "../../../components";
 
 const meta: Meta<typeof NlAccordionContent> = {
-  title: 'Components/Accordion Content',
+  title: 'Hide/Components/Accordion Content',
   component: NlAccordionContent,
   argTypes: {
     // Behaviour

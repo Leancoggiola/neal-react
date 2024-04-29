@@ -1,4 +1,7 @@
 html {
     font-family: 'BreezeSans' !important;
+    *[id^="hide"] {
+        display: none;
+    }
 }
 #storybook-preview-iframe { background: #1A1A24; }

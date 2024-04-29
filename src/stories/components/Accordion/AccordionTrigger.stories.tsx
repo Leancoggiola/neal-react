@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { NlAccordionTrigger } from "../../../components";
 
 const meta: Meta<typeof NlAccordionTrigger> = {
-  title: 'Components/Accordion Trigger',
+  title: 'Hide/Components/Accordion Trigger',
   component: NlAccordionTrigger,
   argTypes: {
     // Behaviour
