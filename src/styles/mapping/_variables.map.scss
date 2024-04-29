@@ -1,7 +1,9 @@
 @use 'sass:map';
 @use '../common/base' as b;
+@use '../common/colors' as c;
 
 // Components
+@use './components/accordion.map' as accordion;
 @use './components/button.map' as button;
 @use './components/button-group.map' as buttonGroup;
 @use './components/fab-button.map' as fabButton;
@@ -20,6 +22,7 @@
 }
 
 $variables:
+    accordion.$variables,
     button.$variables,
     buttonGroup.$variables,
     fabButton.$variables, 
@@ -32,7 +35,9 @@ $variables:
 $baseVars: (
     'primary-font': 'BreezeSans',
     'font-size': 16px,
+    'weight-light': 300,
     'weight-bold': 700,
+    'body-color': c.$grey-100,
 
     'ease-in-out': b.$ease-in-out,
     'ease-in-out-fast': b.$ease-in-out-fast,

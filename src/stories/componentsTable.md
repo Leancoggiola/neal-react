@@ -2,11 +2,12 @@
 
 | Component                                                             | Design | Development | Improved in |
 | --------------------------------------------------------------------- | ------ | ----------- | ----------- |
-| [Accordion](/docs/components-accordion--overview)                     | ✅     | ❌          | 1.0.0       |
+| [Accordion](/docs/components-accordion--overview)                     | ✅     | ✅          | 1.0.0       |
 | [Avatar](/docs/components-avatar--overview)                           | ✅     | ❌          | 1.0.0       |
 | [Badge](/docs/components-badge--overview)                             | ✅     | ❌          | 1.0.0       |
 | [Breadcrumb](/docs/components-breadcrumb--overview)                   | ✅     | ❌          | 1.0.0       |
-| [Button](/docs/components-button--overview)                           | ✅     | ✅          | 1.0.0       |
+| [Button](/docs/components-button-button--overview)                    | ✅     | ✅          | 1.0.0       |
+| [Button Group](/docs/components-button-button-group--overview)        | ✅     | ✅          | 1.0.0       |
 | [Card](/docs/components-card--overview)                               | ✅     | ❌          | 1.0.0       |
 | [Carousel](/docs/components-carousel--overview)                       | ✅     | ❌          | 1.0.0       |
 | [Checkbox](/docs/components-checkbox--overview)                       | ✅     | ❌          | 1.0.0       |
@@ -15,14 +16,14 @@
 | [Content Switcher](/docs/components-content-switcher--overview)       | ✅     | ❌          | 1.0.0       |
 | [Date Picker](/docs/components-date-picker--overview)                 | ✅     | ❌          | 1.0.0       |
 | [Dropdown](/docs/components-dropdown--overview)                       | ✅     | ❌          | 1.0.0       |
-| [Fab Button](/docs/components-fab-button--overview)                   | ✅     | ✅          | 1.0.0       |
+| [Fab Button](/docs/components-button-fab-button--overview)            | ✅     | ✅          | 1.0.0       |
 | [File Uploader](/docs/components-file-uploader--overview)             | ✅     | ❌          | 1.0.0       |
 | [Filters](/docs/components-filters--overview)                         | ✅     | ❌          | 1.0.0       |
 | [Footer](/docs/components-footer--overview)                           | ✅     | ❌          | 1.0.0       |
 | [Form Field](/docs/components-form-field--overview)                   | ✅     | ❌          | 1.0.0       |
 | [Header](/docs/components-header--overview)                           | ✅     | ❌          | 1.0.0       |
 | [Icon](/docs/components-icon--overview)                               | ✅     | ✅          | 1.0.0       |
-| [Icon Button](/docs/components-icon-button--overview)                 | ✅     | ✅          | 1.0.0       |
+| [Icon Button](/docs/components-button-icon-button--overview)          | ✅     | ✅          | 1.0.0       |
 | [Inline Message](/docs/components-inline-message--overview)           | ✅     | ❌          | 1.0.0       |
 | [Input](/docs/components-input--overview)                             | ✅     | ❌          | 1.0.0       |
 | [Loading Spinner](/docs/components-loading-spinner--overview)         | ✅     | ✅          | 1.0.0       |

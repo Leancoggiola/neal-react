@@ -1,0 +1,42 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+import * as AccordionGroupStories from './AccordionGroup.stories';
+import * as AccordionTriggerStories from './AccordionTrigger.stories';
+import * as AccordionContentStories from './AccordionContent.stories';
+
+<Meta of={AccordionStories} name="Overview" />
+
+# NL - Accordion
+
+`NlAccordion` wraps two components:
+
+- The `NlAccordionTrigger` component handles the toggling of the accordion content to a visible/invisible state.
+- The `NlAccordionContent` component is a wrapper of all the information show on the accordion.
+
+For multiple accordions in succession, there is a component called `NlAccordionGroup`.
+
+<Canvas of={AccordionStories.AccordionDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlAccordion } from 'neal-react';`} />
+### Props
+<ArgTypes of={AccordionStories} />
+
+## AccordionGroup component
+
+<Source dark code={`import { NlAccordionGroup } from 'neal-react';`} />
+### Props
+<ArgTypes of={AccordionGroupStories} />
+
+## AccordionTrigger component
+
+<Source dark code={`import { NlAccordionTrigger } from 'neal-react';`} />
+### Props
+<ArgTypes of={AccordionTriggerStories} />
+
+## AccordionContent component
+
+<Source dark code={`import { NlAccordionContent } from 'neal-react';`} />
+### Props
+<ArgTypes of={AccordionContentStories} />

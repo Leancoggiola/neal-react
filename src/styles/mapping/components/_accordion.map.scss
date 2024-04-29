@@ -1,0 +1,19 @@
+@use '../../common/common' as v;
+
+$variables: (
+    // Base
+    'accordion--border-radius': #{v.$border-radius},
+    'accordion--border-color': #{v.$grey-900},
+
+    'accordion--bg-color': #{v.$grey-950},
+    // Trigger
+    'accordion-trigger--color': #{v.$grey-100},
+    'accordion-trigger--bg-color': #{v.$grey-950},
+    // Content
+    
+    // Focus
+    'accordion-focus--outline-style': solid,
+    'accordion-focus--outline-color': #{v.$blue-200},
+    'accordion-focus--outline-width': 0.125rem,
+    'accordion-focus--outline-offset': 0.125rem,
+)
