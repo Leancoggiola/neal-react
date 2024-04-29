@@ -6,6 +6,25 @@
   border-width: 1px;
   box-shadow: none;
 
+  &:active {
+    .nl-accordion-trigger {
+      background-color: var(--nl-accordion-trigger-active--bg-color);
+    }
+  }
+
+  &:hover {
+    .nl-accordion-trigger {
+      background-color: var(--nl-accordion-trigger-hover--bg-color);
+    }
+  }
+
+  &:focus-visible {
+    outline-style: var(--nl-accordion-focus--outline-style);
+    outline-color: var(--nl-accordion-focus--outline-color);
+    outline-width: var(--nl-accordion-focus--outline-width);
+    outline-offset: var(--nl-accordion-focus--outline-offset);
+  }
+
   &-content-visible {
     .nl-accordion-trigger-collapse-icon { opacity: 1 }
     .nl-accordion-trigger-expand-icon { opacity: 0 }

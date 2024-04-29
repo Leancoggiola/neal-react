@@ -4,13 +4,14 @@ $variables: (
     // Base
     'accordion--border-radius': #{v.$border-radius},
     'accordion--border-color': #{v.$grey-900},
-
     'accordion--bg-color': #{v.$grey-950},
+
     // Trigger
     'accordion-trigger--color': #{v.$grey-100},
     'accordion-trigger--bg-color': #{v.$grey-950},
-    // Content
-    
+    'accordion-trigger-active--bg-color': #{v.$grey-800},
+    'accordion-trigger-hover--bg-color': #{v.$grey-900},
+
     // Focus
     'accordion-focus--outline-style': solid,
     'accordion-focus--outline-color': #{v.$blue-200},
