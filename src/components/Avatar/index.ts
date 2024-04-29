@@ -1,0 +1,1 @@
+export { NlAvatar } from './Avatar';

@@ -1,0 +1,35 @@
+@use '../../common/common' as v;
+
+$variables: (
+    'avatar--border-color': #{v.$grey-900},
+
+    'avatar--outline-color': #{v.$blue-200},
+    'avatar--outline-style': solid,
+    'avatar--outline-width': 0.125rem,
+    'avatar--outline-offset': 0,
+
+    'avatar-status-icon--border-color': #{v.$grey-800},
+
+    'avatar-status-icon-online--bg-color': #{v.$green-300},
+    'avatar-status-icon-no-disturb--bg-color': #{v.$red-500},
+    'avatar-status-icon-no-available--bg-color': #{v.$red-500},
+    'avatar-status-icon-absent--bg-color': #{v.$orange-500},
+    'avatar-status-icon-warning--bg-color': #{v.$orange-300},
+    'avatar-status-icon-offline--bg-color': #{v.$grey-500},
+
+    'avatar-initials--color': #{v.$grey-100},
+    'avatar-initials--bg-color': #{v.$grey-950},
+
+    'avatar-interactive-active--img-opacity': 0.7,
+    'avatar-interactive-initials-active--color': #{v.$grey-300},
+    'avatar-interactive-initials-active--bg-color': #{v.$grey-800},
+
+    'avatar-interactive-hover--img-opacity': 0.8,
+    'avatar-interactive-initials-hover--color': #{v.$grey-200},
+    'avatar-interactive-initials-hover--bg-color': #{v.$grey-900},
+
+    'avatar-interactive-disabled--img-opacity': 0.6,
+    'avatar-interactive-initials-disabled--color': #{v.$grey-200},
+    'avatar-interactive-initials-disabled--bg-color': #{v.$grey-700},
+
+)

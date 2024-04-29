@@ -1,0 +1,14 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} name="Overview" />
+
+# NL - Avatar
+
+<Canvas of={AvatarStories.AvatarDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlAvatar } from 'neal-react';`} />
+### Props
+<ArgTypes of={AvatarStories} />
