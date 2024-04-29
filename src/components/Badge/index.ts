@@ -1,0 +1,1 @@
+export { NlBadge } from './Badge';

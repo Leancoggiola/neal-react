@@ -1,0 +1,14 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} name="Overview" />
+
+# NL - Badge
+
+<Canvas of={BadgeStories.BadgeDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlBadge } from 'neal-react';`} />
+### Props
+<ArgTypes of={BadgeStories} />

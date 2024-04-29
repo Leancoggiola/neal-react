@@ -1,0 +1,18 @@
+@use '../../common/common' as v;
+
+$variables: (
+    'badge--color': #{v.$grey-300},
+    'badge--bg-color': #{v.$grey-950},
+    'badge--outline-color': #{v.$grey-800},
+
+    'badge-alt--color': #{v.$grey-300},
+    'badge-alt--bg-color': #{v.$grey-900},
+    'badge-success--color': #{v.$green-200},
+    'badge-success--bg-color': #{v.$green-900},
+    'badge-info--color': #{v.$blue-200},
+    'badge-info--bg-color': #{v.$blue-900},
+    'badge-warning--color': #{v.$orange-200},
+    'badge-warning--bg-color': #{v.$orange-900},
+    'badge-error--color': #{v.$red-300},
+    'badge-error--bg-color': #{v.$red-900},
+)

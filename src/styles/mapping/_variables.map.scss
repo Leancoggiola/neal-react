@@ -5,6 +5,7 @@
 // Components
 @use './components/accordion.map' as accordion;
 @use './components/avatar.map' as avatar;
+@use './components/badge.map' as badge;
 @use './components/button.map' as button;
 @use './components/button-group.map' as buttonGroup;
 @use './components/fab-button.map' as fabButton;
@@ -25,6 +26,7 @@
 $variables:
     accordion.$variables,
     avatar.$variables,
+    badge.$variables,
     button.$variables,
     buttonGroup.$variables,
     fabButton.$variables, 

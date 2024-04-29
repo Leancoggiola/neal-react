@@ -4,7 +4,7 @@
 | --------------------------------------------------------------------- | ------ | ----------- | ----------- |
 | [Accordion](/docs/components-accordion--overview)                     | ✅     | ✅          | 1.0.0       |
 | [Avatar](/docs/components-avatar--overview)                           | ✅     | ✅          | 1.0.0       |
-| [Badge](/docs/components-badge--overview)                             | ✅     | ❌          | 1.0.0       |
+| [Badge](/docs/components-badge--overview)                             | ✅     | ✅          | 1.0.0       |
 | [Breadcrumb](/docs/components-breadcrumb--overview)                   | ✅     | ❌          | 1.0.0       |
 | [Button](/docs/components-button-button--overview)                    | ✅     | ✅          | 1.0.0       |
 | [Button Group](/docs/components-button-button-group--overview)        | ✅     | ✅          | 1.0.0       |
