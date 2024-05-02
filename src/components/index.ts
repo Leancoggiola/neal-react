@@ -4,6 +4,7 @@ export * from './Badge';
 export * from './Button';
 export * from './ButtonGroup';
 export * from './FabButton';
+export * from './FormWrapper';
 export * from './Icon';
 export * from './IconButton';
 export * from './LoadingSpinner';

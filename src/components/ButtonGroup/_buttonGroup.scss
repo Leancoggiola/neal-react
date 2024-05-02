@@ -16,7 +16,7 @@
       outline-color: var(--nl-btn-group-focus--outline-color);
       outline-width: var(--nl-btn-group-focus--outline-width);
       outline-offset: var(--nl-btn-group-focus--outline-offset);
-      z-index: 1000;
+      z-index: 1;
     }
     &:first-child {
       border-radius: var(--nl-btn-group--border-radius-left);

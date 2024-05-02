@@ -1,0 +1,17 @@
+@use '../../../common/common' as v;
+
+$variables: (
+  'input--color': #{v.$grey-300},
+  'input--bg-color': #{v.$grey-950},
+  'input--border-color': #{v.$grey-700},
+
+  'input-hover--bg-color': #{v.$grey-900},
+  'input-disabled--color': #{v.$grey-500},
+  'input-disabled--bg-color': #{v.$grey-900},
+  'input-error--border-color': #{v.$error},
+
+  'input-focus--outline-color': #{v.$purple-500},
+  'input-focus--outline-style': solid,
+  'input-focus--outline-width': 0.125rem,
+  'input-focus--outline-offset': -1px,
+)

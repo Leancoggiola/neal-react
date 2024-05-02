@@ -1,0 +1,6 @@
+@use '../../../common/common' as v;
+
+$variables: (
+  'label--color': #{v.$grey-300},
+  'label-disabled--color': #{v.$grey-950},
+)

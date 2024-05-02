@@ -1,0 +1,9 @@
+@forward './Input/input';
+@forward './Label/label';
+
+.nl-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}

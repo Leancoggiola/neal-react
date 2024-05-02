@@ -1,14 +1,10 @@
 @forward 'styles/styles.scss';
 
 :root {
-    --ease-in-out: 300ms ease-in-out;
-    --ease-in-out-fast: 150ms ease-in-out;
-    --ease-in-out-expo: cubic-bezier(1,0,0,1);
-    body {
-        font-family: 'BreezeSans' !important;
-    }
-    p {
-        color: var(--body-color);
-        font-weight: var(--weight-light);
-    }
+  * { box-sizing: border-box }
+  body { font-family: 'BreezeSans' !important }
+  p {
+    color: var(--body-color);
+    font-weight: var(--weight-light);
+  }
 }

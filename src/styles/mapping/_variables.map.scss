@@ -15,6 +15,10 @@
 @use './components/progress-bar.map' as progressMap;
 @use './components/text-link.map' as textLink;
 
+// Form Components
+@use './components/form/input.map' as formInput;
+@use './components/form/label.map' as formLabel;
+
 @function merge($arrs) {
     $final: ();
     @each $arr in $arrs {
@@ -29,12 +33,15 @@ $variables:
     badge.$variables,
     button.$variables,
     buttonGroup.$variables,
-    fabButton.$variables, 
+    fabButton.$variables,
     icon.$variables, 
     iconButton.$variables, 
     loadingSpinner.$variables,
     progressMap.$variables,
-    textLink.$variables;
+    textLink.$variables,
+    
+    formInput.$variables,
+    formLabel.$variables;
 
 $baseVars: (
     'primary-font': 'BreezeSans',

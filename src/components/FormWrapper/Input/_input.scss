@@ -1,0 +1,58 @@
+.nl-input-wrapper {
+  position: relative;
+  .nl-input {
+    display: block;
+    color: var(--nl-input--color);
+    background-color: var(--nl-input--bg-color);
+
+    font-family: var(--primary-font);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    border-color: var(--nl-input--border-color);
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    
+    width: 100%;
+    height: 2.875rem;
+    padding: 0.25rem 0.875rem;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    &:hover:not(:disabled) { --nl-input--bg-color: var(--nl-input-hover--bg-color) }
+
+    &:focus-visible {
+      padding-top: 1.25rem;
+      outline-style: var(--nl-input-focus--outline-style);
+      outline-color: var(--nl-input-focus--outline-color);
+      outline-width: var(--nl-input-focus--outline-width);
+      outline-offset: var(--nl-input-focus--outline-offset);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      --nl-input--color: var(--nl-input-disabled--color);
+      --nl-input--bg-color: var(--nl-input-disabled--bg-color);
+    }
+
+    &.nl-input-error { --nl-input--border-color: var(--nl-input-error--border-color)}
+
+    &.nl-input-has-value,
+    &.nl-input-has-placeholder { 
+      padding-top: 1.25rem 
+    }
+  }
+
+  .nl-input-clear-button {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    right: 0.875rem;
+    transform: translateY(-50%);
+  }
+}
