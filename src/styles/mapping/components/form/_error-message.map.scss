@@ -1,0 +1,5 @@
+@use '../../../common/common' as v;
+
+$variables: (
+  'error-message--color': #{v.$error},
+)

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useEffect, useState } from "react";
-import { NlFormWrapper, NlInput, NlLabel } from "../../../../components";
+import { NlErrorMessage, NlFormWrapper, NlInput, NlLabel } from "../../../../components";
 
 const meta: Meta<typeof NlInput> = {
   title: 'Components/Forms/Input',
@@ -88,12 +88,13 @@ export const InputDefault: Story = {
       <NlFormWrapper error={error}>
         <NlLabel>Text Input</NlLabel>
         <NlInput {...args} value={val} onChange={e => setVal(e.target.value)} />
+        <NlErrorMessage>This field is required</NlErrorMessage>
       </NlFormWrapper>
     )
   },
   args: {
     id: 'input',
-    type: 'number',
+    type: 'text',
     required: true
   },
   parameters: {
