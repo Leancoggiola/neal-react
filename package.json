@@ -37,6 +37,7 @@
     "@types/react": "^18.2.67",
     "classnames": "^2.5.1",
     "node-sass": "^9.0.0",
+    "react-popper": "^2.3.0",
     "rollup": "^4.13.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
