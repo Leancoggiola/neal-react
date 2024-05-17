@@ -20,6 +20,8 @@ $variables: (
   'select-input-disabled--bg-color': #{v.$grey-900},
   'select-input-arrow-disabled--color': #{v.$grey-500},
 
+  'select-input-error--border-color': #{v.$error},
+
   // Select list
   'select-list--bg-color': #{v.$grey-950},
   'select-list--border-color': #{v.$grey-900},
@@ -42,4 +44,19 @@ $variables: (
   'select-option-focus--outline-offset': -0.125rem,
 
   'select-option-disabled--color': #{v.$grey-500},
+
+  // Select search
+  'select-seach--color': #{v.$grey-100},
+  'select-seach--bg-color': #{v.$grey-950},
+  'select-seach--border-color': #{v.$grey-700},
+  'select-seach-arrow--color': #{v.$grey-300},
+
+  // Select checkbox
+  'select-checkbox-checked--border-color': #{v.$grey-400},
+  'select-checkbox-checked-icon--color': #{v.$grey-200},
+
+  // Select check all
+  'select-all--color': #{v.$grey-100},
+  'select-all--bg-color': #{v.$grey-950},
+  'select-all--border-color': #{v.$grey-700},
 )

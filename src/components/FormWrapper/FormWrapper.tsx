@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { FormWrapperProps } from './FormWrapper.types';
 import { ElementType, FormWrapperProvider } from './FormWrapper.context';
 
-export const NlFormWrapper: FC<FormWrapperProps> = ({ children, error = false, className = '' }) => {
+export const NlFormWrapper: FC<FormWrapperProps> = ({ children, className = '' }) => {
   const [id, setId] = useState<string>('');
   const [value, setValue] = useState(null);
   const [elementType, setElementType] = useState<ElementType>('text');
@@ -11,7 +11,7 @@ export const NlFormWrapper: FC<FormWrapperProps> = ({ children, error = false, c
   const [isRequired, setIsRequired] = useState<boolean>(false);
   const [isFocus, setIsFocus] = useState<boolean>(false);
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [isError, setIsError] = useState<boolean>(error);
+  const [isError, setIsError] = useState<boolean>(false);
   const [hasContent, setHasContent] = useState<boolean>(false);
   const [hasLabel, setHasLabel] = useState<boolean>(false);
   const [hasPlaceholder, setHasPlaceholder] = useState<boolean>(false);
@@ -20,8 +20,6 @@ export const NlFormWrapper: FC<FormWrapperProps> = ({ children, error = false, c
     'nl-form-wrapper': true,
     [className]: true,
   });
-
-  useEffect(() => setIsError(error), [error])
 
   const contextData = {
     id,

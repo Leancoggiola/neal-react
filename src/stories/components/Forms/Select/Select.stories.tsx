@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { useEffect, useState } from "react";
-import { NlFormWrapper, NlLabel, NlOption, NlSelect } from "../../../../components";
+import { useState } from "react";
+import { NlErrorMessage, NlFormWrapper, NlLabel, NlOption, NlSelect } from "../../../../components";
 
 const meta: Meta<typeof NlSelect> = {
   title: 'Components/Forms/Select',
@@ -93,50 +93,22 @@ const SelectTemplate = {
           <NlOption value="nissan">Nissan</NlOption>
           <NlOption value="dodge">Dodge</NlOption>
         </NlSelect>
+        {value.length === 0 && <NlErrorMessage>This field is required</NlErrorMessage>}
       </NlFormWrapper>
     );
   },
 };
 
-export const SelectDefault = {
+export const SelectDefault: Story = {
   ...SelectTemplate,
   args: {
     placeholder: 'Placeholder',
     visibleOptions: 4,
+    required: true
   },
-  argTypes: {
-    // properties without control but still in UI
-    // children: {
-    //   control: false,
-    // },
-    // icons: {
-    //   control: false,
-    // },
-    // value: { control: 'text' },
-    // visibleOptions: {
-    //   control: { type: 'number', min: 1 },
-    // },
-    // filter: {
-    //   control: { type: 'boolean' },
-    // },
-    // className: {
-    //   control: false,
-    // },
-    // // properties removed from UI
-    // multiple: {
-    //   table: {
-    //     disable: true,
-    //   },
-    // },
-    // showSelectAllButton: {
-    //   table: {
-    //     disable: true,
-    //   },
-    // },
-    // i18n: {
-    //   table: {
-    //     disable: true,
-    //   },
-    // },
-  },
+  parameters: {
+    controls: {
+      exclude: ["id", "children", "value", "required", "searchPlaceholder", "noResultsLayout", "onChange"]
+    }
+  }
 };

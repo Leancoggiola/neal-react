@@ -1,8 +1,9 @@
 import classNames from "classnames";
-import { FC, useContext, useEffect } from "react"
+import { FC, useContext, useEffect } from "react";
 
-import { NlIcon } from "../../../Icon";
 import { actionIcSearch, contentIcRemove, navigationIcCheck } from "../../../../assets/icons";
+import { NlIcon } from "../../../Icon";
+import { NlOption } from "../Option";
 
 import { SelectContext } from "../Select.context";
 
@@ -45,7 +46,6 @@ export const SelectAll: FC<SelectAllProps> = ({ selectLabel = 'Select All', dese
 
 export const SelectSearch: FC<{}> = () => {
   const {
-    id,
     open,
     multiple,
     totalOptions,
@@ -109,4 +109,4 @@ export const DefaultOptionTemplate: FC<{ value: string, searchTerm: string }> = 
   );
 }
 
-export const NoResultsTemplate: FC<{ message: string }> = ({ message }) => null
+export const NoResultsTemplate: FC<{ message: string }> = ({ message }) => <NlOption value={'none'} disabled>{message}</NlOption>;

@@ -30,6 +30,15 @@
   &-disabled {
     color: var(--nl-select-option-disabled--color);
     cursor: not-allowed;
+    .nl-select-checkbox {
+      border-color: var(--select-option-disabled-border-color);
+      pointer-events: none;
+
+      &-selected,
+      &--indeterminate {
+        background-color: var(--checkbox-checked-disabled--bg-color);
+      }
+    }
   }
 
   &-current {

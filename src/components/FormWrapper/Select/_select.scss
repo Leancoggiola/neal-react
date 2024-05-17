@@ -1,4 +1,5 @@
 @forward './Option/option';
+@forward './SupportComponents/support';
 
 .nl-select {
   display: block;
@@ -7,19 +8,19 @@
   &-open {  
     .nl-select-options { display: block }
     .nl-select-input-arrow { transform: rotate(180deg) }
+
+    .nl-select-search,
+    .nl-select-all {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &-error {
     .nl-select-input {
-      border-color: var(--input-error--border-color);
-      border-width: var(--input-error--border-width);
-      border-style: var(--input-error--border-style);
+      border-color: var(--nl-select-input-error--border-color);
 
-      &:focus:not(:disabled) {
-        --input-error--border-color: var(--nl-select-trigger-focus--border-color);
-        --input-error--border-width: var(--nl-select-trigger-focus--border-width);
-        --input-error--border-style: var(--nl-select-trigger-focus--border-style);
-      }
+      &:focus:not(:disabled) { --nl-select-input-error--border-color: var(--nl-select-input-focus--border-color);}
     }
   }
 }

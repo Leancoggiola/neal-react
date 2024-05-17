@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NlErrorMessage, NlFormWrapper, NlInput, NlLabel } from "../../../../components";
 
 const meta: Meta<typeof NlInput> = {
@@ -80,15 +80,12 @@ type Story = StoryObj<typeof NlInput>;
 export const InputDefault: Story = {
   render: (args) => {
     const [val, setVal] = useState<string>('');
-    const [error, setError] = useState<boolean>(false);
-
-    useEffect(() => setError(args.required as boolean && val === ''), [val, args.required])
 
     return (
-      <NlFormWrapper error={error}>
+      <NlFormWrapper>
         <NlLabel>Text Input</NlLabel>
         <NlInput {...args} value={val} onChange={e => setVal(e.target.value)} />
-        <NlErrorMessage>This field is required</NlErrorMessage>
+        {val === '' && <NlErrorMessage>This field is required</NlErrorMessage>}
       </NlFormWrapper>
     )
   },
