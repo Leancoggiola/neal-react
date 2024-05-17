@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NlFormWrapper, NlLabel, NlOption, NlSelect } from "../../../../components";
 
 const meta: Meta<typeof NlSelect> = {
@@ -79,14 +79,11 @@ type Story = StoryObj<typeof NlSelect>;
 const SelectTemplate = {
   render: (args: any) => {
     const [value, setValue] = useState<string[]>([]);
-    const [error, setError] = useState<boolean>(false);
-
-    useEffect(() => setError(args.required as boolean && value === []), [value, args.required])
 
     return (
       <NlFormWrapper>
         <NlLabel>Cars</NlLabel>
-        <NlSelect {...args} value={value} onChange={val => setValue(val)}>
+        <NlSelect {...args} value={value} onChange={val => setValue(val)} >
           <NlOption value="audi">Audi</NlOption>
           <NlOption value="alfa romeo" disabled>Alfa Romeo (disabled)</NlOption>
           <NlOption value="ferrari">Ferrari</NlOption>
