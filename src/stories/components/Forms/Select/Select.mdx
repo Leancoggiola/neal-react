@@ -1,0 +1,19 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as SelectStories from './Select.stories';
+
+<Meta of={SelectStories} name="Overview" />
+
+# NL - Form - Select component
+
+The `NlSelect` component is part of the Form components redesign on the library.
+It goes wrapped under the [NlFromWrapper](?path=/docs/components-forms-form-wrapper--overview) that share the information between the other components like `NlLabel` and `NlErrorMessage`.
+
+The follow example include the use of `NlLabel`, `NlSelect` and `NlErrorMessage` for error message display
+
+<Canvas of={SelectStories.SelectDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlSelect, NlOption } from 'neal-react';`} />
+### Props
+<ArgTypes of={SelectStories} />

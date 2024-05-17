@@ -2,13 +2,13 @@ import classNames from 'classnames';
 import { BaseSyntheticEvent, Children, FC, ReactElement, RefObject, cloneElement, useContext, useEffect, useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
-import { navigationIcArrowDownward } from '../../../assets/icons';
-import { NoResultsTemplate, SelectAll, SelectSearch } from './SupportComponents';
+import { hardwareIcKeyboardArrowDown } from '../../../assets/icons';
 import { NlIcon } from '../../Icon';
+import { NoResultsTemplate, SelectAll, SelectSearch } from './SupportComponents';
 
-import { SelectProps } from './Select.types';
-import { SelectProvider } from './Select.context';
 import { FormWrapperContext } from '../FormWrapper.context';
+import { SelectProvider } from './Select.context';
+import { SelectProps } from './Select.types';
 
 let idCounter = 0;
 
@@ -66,7 +66,7 @@ export const NlSelect: FC<SelectProps> = ({
     },
     {
       name: 'preventOverflow',
-      options: { padding: 8 }
+      options: { padding: 0 }
     },
     {
       name: 'flip',
@@ -105,14 +105,14 @@ export const NlSelect: FC<SelectProps> = ({
     } else {
       const currentValue = optionsChildren.reduce((acc, { props: { value: val, children: child, label, optionIndex } }) => {
         if (val === valueSelected) {
-          acc.displayedValue = typeof child === 'object' ? label : child;
-          acc.optionSelected = optionIndex;
+          acc.displayedValue = [typeof child === 'object' ? label : child];
+          acc.optionSelected = [optionIndex];
           acc.optionCurrent = optionIndex;
         }
         return acc;
-      }, { displayedValue: '', optionSelected: -1, optionCurrent: -1 });
-      setDisplayedValue([currentValue.displayedValue]);
-      setOptionSelected([currentValue.optionSelected]);
+      }, { displayedValue: [] as string[], optionSelected: [-1], optionCurrent: -1 });
+      setDisplayedValue(currentValue.displayedValue);
+      setOptionSelected(currentValue.optionSelected);
       setOptionCurrent(currentValue.optionCurrent);
     }
   };
@@ -150,7 +150,7 @@ export const NlSelect: FC<SelectProps> = ({
     formContext.setIsRequired(required);
     formContext.setElementType('select');
     formContext.setHasPlaceholder(typeof placeholder === 'string' && placeholder.length > 0);
-    id ? formContext.setId(id) : formContext.setId(`nl-input-${idCounter++}`);
+    id ? formContext.setId(id) : formContext.setId(`nl-select-${idCounter++}`);
 
     document.addEventListener('click', clickOutside);
     return () => document.removeEventListener('click', clickOutside)
@@ -308,8 +308,7 @@ export const NlSelect: FC<SelectProps> = ({
   const classes = classNames({
     'nl-select': true,
     'nl-select-open': open,
-    'nl-select-disabled': disabled,
-    'nl-select-invalid': formContext.isError,
+    'nl-select-error': formContext.isError,
     [className]: true,
   });
 
@@ -348,28 +347,15 @@ export const NlSelect: FC<SelectProps> = ({
         onFocus={() => formContext.setIsFocus(true)}
         onBlur={() => formContext.setIsFocus(false)}
       >
-        <button
-          ref={selectTriggerRef}
-          role="combobox"
-          disabled={disabled}
-          className="nl-select-input"
-          onClick={() => setOpen(!open)}
-        >
+        <button ref={selectTriggerRef} role="combobox" disabled={disabled} onClick={() => setOpen(!open)} className="nl-select-input">
           <span className="nl-select-input-placeholder">{!formContext.hasContent && placeholder}</span>
-
           <div className="nl-select-input-text">
             {displayedValue.filter(Boolean).join(', ')}
           </div>
-
-          <NlIcon src={navigationIcArrowDownward} className="nl-select-input-arrow" />
+          <NlIcon src={hardwareIcKeyboardArrowDown} className="nl-select-input-arrow" />
         </button>
 
-        <div
-          className="nl-select-wrapper-options"
-          ref={selectWrapperRef}
-          style={styles.popper}
-          {...attributes.popper}
-        >
+        <div ref={optionWrapperRef} style={styles.popper} {...attributes.popper} className="nl-select-wrapper-options">
           {multiple && showSelectAllBtn && <SelectAll />}
           {filter && <SelectSearch />}
           <div
@@ -380,11 +366,7 @@ export const NlSelect: FC<SelectProps> = ({
             className="nl-select-options"
             style={{ maxHeight: `${visibleOptions * 3}rem` }}
           >
-            {optionsChildrenSorted.length > 0 ? (
-              optionsChildrenSorted
-            ) : (
-              <NoResultsTemplate message="No results were found" />
-            )}
+            {optionsChildrenSorted.length > 0 ? (optionsChildrenSorted) : (<NoResultsTemplate message="No results were found" />)}
           </div>
         </div>
       </div>

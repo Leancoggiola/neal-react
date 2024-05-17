@@ -5,6 +5,7 @@
 | [Form - Wrapper](/docs/components-forms-form-wrapper--overview) | ✅          | 1.0.0       |
 | [Form - Input](/docs/components-forms-input--overview)          | ✅          | 1.0.0       |
 | [Form - Label](/docs/components-forms-label--overview)          | ✅          | 1.0.0       |
+| [Form - Select](/docs/components-forms-select--overview)        | ✅          | 1.0.0       |
 
 ### Component Status
 

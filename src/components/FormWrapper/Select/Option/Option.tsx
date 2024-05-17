@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, ReactElement, cloneElement, useContext, useEffect, useRef, useState } from 'react';
+import { FC, ReactElement, ReactNode, cloneElement, useContext, useEffect, useRef, useState } from 'react';
 
 import { SelectContext } from '../Select.context';
 import { DefaultOptionTemplate, SelectCheckbox } from '../SupportComponents';
@@ -21,7 +21,7 @@ export const NlOption: FC<OptionProps> = ({
   children,
   value: optionValue = '',
   label = '',
-  disabled = true,
+  disabled = false,
   optionIndex = 0,
   isSelected = false,
   isCurrentSelected = false,
@@ -50,10 +50,10 @@ export const NlOption: FC<OptionProps> = ({
   const optionIsSelected = optionIndex === optionCurrent;
   const optionAtTheTop = searchOption !== '' && optionIndex === 0 && optionCurrent === -1;
 
-  const parsedChildrenOption = (childrenOption: ReactElement) => {
-    if (typeof childrenOption === 'object') return cloneElement(children, { searchTerm: searchOption, value: label })
+  const parsedChildrenOption = (childrenOption: ReactNode) => {
+    if (typeof childrenOption === 'object') return cloneElement(children as ReactElement, { searchTerm: searchOption, value: label })
 
-    return <DefaultOptionTemplate searchTerm={searchOption} value={childrenOption} />;
+    return <DefaultOptionTemplate searchTerm={searchOption} value={childrenOption as string} />;
   };
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export const NlOption: FC<OptionProps> = ({
 
   const handleClickSingle = () => {
     setSelectValue([optionValue]);
-    setDisplayedValue([typeof children === 'object' ? label : children]);
+    setDisplayedValue([typeof children === 'object' ? label : children as string]);
     setOptionSelected([optionIndex]);
     setOptionCurrent(optionIndex);
     setOpen(false);
@@ -89,7 +89,7 @@ export const NlOption: FC<OptionProps> = ({
     });
 
     setDisplayedValue((prevState: string[]) => {
-      const valueShowed = typeof children === 'object' ? label : children;
+      const valueShowed = typeof children === 'object' ? label : children as string;
       if (prevState.includes(valueShowed)) return prevState.filter(val => val !== valueShowed);
       return [...prevState, valueShowed];
     });

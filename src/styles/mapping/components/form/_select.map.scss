@@ -1,0 +1,45 @@
+@use '../../../common/common' as v;
+
+$variables: (
+  // Select btn
+  'select-input--bg-color': #{v.$grey-950},
+  'select-input--border-color': #{v.$grey-700},
+
+  'select-input-label--color': #{v.$grey-300},
+  'select-input-placeholder--color': #{v.$grey-300},
+  'select-input-arrow--color': #{v.$grey-300},
+
+  'select-input-focus--outline-style': solid,
+  'select-input-focus--outline-color': #{v.$purple-500},
+  'select-input-focus--outline-width': 0.125rem,
+  'select-input-focus--outline-offset': 0,
+  'select-input-focus-visible--outline-color': #{v.$blue-200},
+
+  'select-input-hover--bg-color': #{v.$grey-900},
+
+  'select-input-disabled--bg-color': #{v.$grey-900},
+  'select-input-arrow-disabled--color': #{v.$grey-500},
+
+  // Select list
+  'select-list--bg-color': #{v.$grey-950},
+  'select-list--border-color': #{v.$grey-900},
+
+  // Select option
+  'select-option--color': #{v.$grey-100},
+  'select-option--bg-color': transparent,
+
+  'select-option-selected--color': #{v.$grey-100},
+  'select-option-selected--bg-color': #{v.$grey-900},
+
+  'select-option-active--color': #{v.$grey-100},
+  'select-option-active--bg-color': #{v.$grey-800},
+  'select-option-hover--color': #{v.$grey-100},
+  'select-option-hover--bg-color': #{v.$grey-900},
+  
+  'select-option-focus--outline-style': solid,
+  'select-option-focus--outline-color': #{v.$blue-200},
+  'select-option-focus--outline-width': 0.125rem,
+  'select-option-focus--outline-offset': -0.125rem,
+
+  'select-option-disabled--color': #{v.$grey-500},
+)

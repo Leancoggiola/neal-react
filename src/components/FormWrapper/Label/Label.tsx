@@ -18,6 +18,7 @@ export const NlLabel: FC<LabelProps> = ({ children, className = '' }) => {
     'nl-label-when-content': formContext.hasContent,
     'nl-label-when-placeholder': formContext.hasPlaceholder,
     'nl-label-text-input': formContext.elementType === 'text',
+    'nl-label-text-select': formContext.elementType === 'select',
     [className]: true,
   });
 

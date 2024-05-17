@@ -1,8 +1,25 @@
 @use '../src/index.scss';
 
-.sbdocs {
-    font-family: 'BreezeSans' !important;
-    tr:nth-of-type(2n) {
-        background: #23232F!important;
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    div#storybook-root {
+      height: 100%;
     }
+  }
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+}
+.sbdocs {
+  font-family: 'BreezeSans' !important;
+  tr:nth-of-type(2n) {
+    background: #23232F!important;
+  }
 }

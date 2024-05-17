@@ -1,13 +1,13 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 export interface OptionProps {
-  children: ReactElement,
+  children: ReactNode,
   value: string,
   label?: string,
-  disabled: boolean,
-  optionIndex: number,
-  isSelected: boolean,
-  isCurrentSelected: boolean,
-  onClick(): void,
+  disabled?: boolean,
+  optionIndex?: number,
+  isSelected?: boolean,
+  isCurrentSelected?: boolean,
+  onClick?(): void,
   className?: string;
 }

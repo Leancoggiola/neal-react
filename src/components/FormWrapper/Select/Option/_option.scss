@@ -1,5 +1,39 @@
-.nl-error-message {
-  font-size: 0.875rem;
-  color: var(--nl-error-message--color);
-  margin-block: 0.375rem 0;
+.nl-option {
+  display: flex;
+  align-items: center;
+  color: var(--nl-select-option--color);
+  background-color: var(--nl-select-option--bg-color);
+
+  padding: 1rem 0.375rem;
+  max-height: 2.75rem;
+  cursor: pointer;
+
+  &:active {
+    --nl-select-option--color: var(--nl-select-option-active--color);
+    --nl-select-option--bg-color: var(--nl-select-option-active--bg-color);
+  }
+
+  &:hover {
+    --nl-select-option--color: var(--nl-select-option-hover--color);
+    --nl-select-option--bg-color: var(--nl-select-option-hover--bg-color);
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-radius: 4px;
+    outline-width: var(--nl-select-option-focus--outline-width);
+    outline-style: var(--nl-select-option-focus--outline-style);
+    outline-color: var(--nl-select-option-focus--outline-color);
+    outline-offset: var(--nl-select-option-focus--outline-offset);
+  }
+
+  &-disabled {
+    color: var(--nl-select-option-disabled--color);
+    cursor: not-allowed;
+  }
+
+  &-current {
+    --nl-select-option--color: var(--nl-select-option-selected--color);
+    --nl-select-option--bg-color: var(--nl-select-option-selected--bg-color);
+  }
 }
