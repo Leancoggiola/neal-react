@@ -1,0 +1,18 @@
+@use '../../../common/common' as v;
+
+$variables: (
+  'toggle-switch--color': #{v.$grey-100},
+  'toggle-switch--bg-color': #{v.$grey-400},
+  'toggle-switch-hover--bg-color': #{v.$grey-300},
+  'toggle-switch-thumb--bg-color': #{v.$grey-950},
+
+  'toggle-switch-focus--outline-color': #{v.$purple-500},
+
+  'toggle-switch-checked--bg-color': #{v.$green-400},
+  'toggle-switch-checked-thumb--bg-color': #{v.$grey-950},
+  'toggle-switch-checked-hover--bg-color': #{v.$green-200},
+
+  'toggle-switch-disabled--color': #{v.$grey-500},
+  'toggle-switch-disabled--bg-color': #{v.$grey-900},
+  'toggle-switch-disabled-thumb--bg-color': #{v.$grey-500},
+)

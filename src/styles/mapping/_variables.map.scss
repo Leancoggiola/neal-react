@@ -20,6 +20,7 @@
 @use './components/form/input.map' as formInput;
 @use './components/form/label.map' as formLabel;
 @use './components/form/select.map' as formSelect;
+@use './components/form/toggle-switch.map' as formToggleSwitch;
 
 @function merge($arrs) {
     $final: ();
@@ -45,7 +46,8 @@ $variables:
     formErrorMessage.$variables,
     formInput.$variables,
     formLabel.$variables,
-    formSelect.$variables;
+    formSelect.$variables,
+    formToggleSwitch.$variables;
 
 $baseVars: (
     'primary-font': 'BreezeSans',

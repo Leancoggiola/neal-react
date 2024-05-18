@@ -1,0 +1,17 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as ToggleSwitchStories from './ToggleSwitch.stories';
+
+<Meta of={ToggleSwitchStories} name="Overview" />
+
+# NL - Form - ToggleSwitch component
+
+The `NlToggleSwitch` component is part of the Form components redesign on the library. It a wrapper for `input type="checkbox"`
+It goes wrapped under the [NlFromWrapper](?path=/docs/components-forms-form-wrapper--overview) that share the information between the other components like `NlLabel`.
+
+<Canvas of={ToggleSwitchStories.ToggleSwitchDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlToggleSwitch } from 'neal-react';`} />
+### Props
+<ArgTypes of={ToggleSwitchStories} />
