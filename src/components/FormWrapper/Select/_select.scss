@@ -80,6 +80,26 @@
     transition: transform 0.25s ease-in-out;
   }
 
+  &-clean {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    bottom: 0;
+    
+    color: var(--nl-select-input-arrow--color)!important;
+
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: auto;
+    transition: transform 0.25s ease-in-out;
+    z-index: 100;
+  }
+
   &:hover:not(:disabled) {
     --nl-select-input--bg-color: var(--nl-select-input-hover--bg-color);
   }
@@ -119,7 +139,6 @@
   background-color: var(--nl-select-list--bg-color);
 
   border-color: var(--nl-select-list--border-color);
-  border-radius: 0.25rem;
   border-style: solid;
   border-width: 1px;
 

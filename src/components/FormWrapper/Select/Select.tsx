@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { BaseSyntheticEvent, Children, FC, ReactElement, RefObject, cloneElement, useContext, useEffect, useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
-import { hardwareIcKeyboardArrowDown } from '../../../assets/icons';
+import { hardwareIcKeyboardArrowDown, navigationIcClose } from '../../../assets/icons';
 import { NlIcon } from '../../Icon';
 import { NoResultsTemplate, SelectAll, SelectSearch } from './SupportComponents';
 
@@ -352,6 +352,7 @@ export const NlSelect: FC<SelectProps> = ({
           <div className="nl-select-input-text">
             {displayedValue.filter(Boolean).join(', ')}
           </div>
+          {selectValue.length > 0 && <NlIcon src={navigationIcClose} className="nl-select-input-clean" />}
           <NlIcon src={hardwareIcKeyboardArrowDown} className="nl-select-input-arrow" />
         </button>
 

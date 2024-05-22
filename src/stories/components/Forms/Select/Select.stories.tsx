@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { NlErrorMessage, NlFormWrapper, NlLabel, NlOption, NlSelect } from "../../../../components";
+import { actionIcAlarm, actionIcBookmark, actionIcDelete } from "../../../../assets/icons";
+import { NlErrorMessage, NlFormWrapper, NlIcon, NlLabel, NlOption, NlSelect } from "../../../../components";
+import './select.scss';
 
 const meta: Meta<typeof NlSelect> = {
   title: 'Components/Forms/Select',
@@ -76,7 +78,8 @@ const meta: Meta<typeof NlSelect> = {
 export default meta;
 type Story = StoryObj<typeof NlSelect>;
 
-const SelectTemplate = {
+
+export const SelectDefault: Story = {
   render: (args: any) => {
     const [value, setValue] = useState<string[]>([]);
 
@@ -95,15 +98,63 @@ const SelectTemplate = {
         </NlSelect>
         {value.length === 0 && <NlErrorMessage>This field is required</NlErrorMessage>}
       </NlFormWrapper>
-    );
+    )
   },
-};
-
-export const SelectDefault: Story = {
-  ...SelectTemplate,
   args: {
     placeholder: 'Placeholder',
-    visibleOptions: 4,
+    visibleOptions: 3,
+    required: true
+  },
+  parameters: {
+    controls: {
+      exclude: ["id", "children", "value", "required", "searchPlaceholder", "noResultsLayout", "onChange"]
+    }
+  }
+};
+
+export const SelectCustomOptions: Story = {
+  render: (args: any) => {
+    const [value, setValue] = useState<string[]>([]);
+
+    return (
+      <NlFormWrapper>
+        <NlLabel>Cars</NlLabel>
+        <NlSelect {...args} value={value} onChange={val => setValue(val)} >
+          <NlOption value="Clock" label="Clock">
+            <div className="nl-sb-select-option">
+              <NlIcon src={actionIcAlarm} />
+              <span className="nl-sb-select-option-details">
+                <span>Clock</span>
+                <span>This is a description for clock emoji</span>
+              </span>
+            </div>
+          </NlOption>
+          <NlOption value="Delete" label="Delete">
+            <div className="nl-sb-select-option">
+              <NlIcon src={actionIcDelete} />
+              <span className="nl-sb-select-option-details">
+                <span>Delete</span>
+                <span>This is a description for delete emoji</span>
+              </span>
+            </div>
+          </NlOption>
+          <NlOption value="Bookmark" label="Bookmark">
+            <div className="nl-sb-select-option">
+              <NlIcon src={actionIcBookmark} />
+              <span className="nl-sb-select-option-details">
+                <span>Bookmark</span>
+                <span>This is a description for bookmark emoji</span>
+              </span>
+            </div>
+          </NlOption>
+        </NlSelect>
+        {value.length === 0 && <NlErrorMessage>This field is required</NlErrorMessage>}
+      </NlFormWrapper>
+    )
+  },
+  args: {
+    placeholder: 'Placeholder',
+    visibleOptions: 3,
     required: true
   },
   parameters: {

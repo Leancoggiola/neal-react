@@ -1,6 +1,18 @@
 @forward 'styles/styles.scss';
 
 body {
-  * { box-sizing: border-box }
+  * { 
+    box-sizing: border-box;
+    &::-webkit-scrollbar { width: 0.5rem;}
+  
+    &::-webkit-scrollbar-track {
+      background-color: var(--scrollbar-track--bg-color);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-thumb--bg-color);
+      border-radius: 4px;
+    }
+  }
   font-family: 'BreezeSans' !important;
 }

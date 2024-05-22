@@ -1,0 +1,16 @@
+.nl-sb-select-option {
+  display: flex;
+  gap: 10px;
+  &-details {
+    display: flex;
+    flex-flow: column;
+    span:nth-child(2) {
+      font-size: 0.75rem;
+      font-style: italic;
+    }
+  }
+  .nl-icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
