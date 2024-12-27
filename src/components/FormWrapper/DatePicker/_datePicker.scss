@@ -1,0 +1,548 @@
+@use 'react-calendar/dist/Calendar.css';
+@use 'react-date-picker/dist/DatePicker.css';
+@use '@wojtekmaj/react-daterange-picker/dist/DateRangePicker.css';
+
+@mixin tile-border-radius($position, $radius) {
+  border-top-#{$position}-radius: $radius;
+  border-bottom-#{$position}-radius: $radius;
+}
+
+.nl-date-picker-wrapper {
+  position: relative;
+  height: auto;
+
+  *:focus,
+  *:focus-visible {
+    outline: none;
+  }
+
+  .nl-date-picker {
+    display: block;
+    resize: vertical;
+    color: var(--nl-date-picker--color);
+    background-color: var(--nl-date-picker--bg-color);
+    line-height: 0.5rem;
+
+    border-color: var(--nl-date-picker--border-color);
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: none;
+
+    height: 2.75rem;
+    width: 20rem;
+    transition: padding-left 300ms var(--ease-in-out-expo);
+
+    &-range {
+      width: 20rem;
+    }
+
+    &-calendar {
+      background-color: var(--nl-date-picker-calendar--bg-color);
+
+      border-color: var(--nl-date-picker-calendar--border-color);
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 0.125rem;
+      
+      margin-top: 0.1875rem;
+      width: 20rem;
+      padding: 1.25rem 1.5rem;
+
+      .react-calendar__navigation {
+        background: var(--nl-date-picker-navigation--bg-color);
+        color: var(--nl-date-picker-navigation--color);
+        margin-bottom: 0.75rem;
+        height: 2.75rem;
+        padding: 0;
+        width: 18rem;
+  
+        button {
+          min-width: 2.75rem;
+          border-color: var(--nl-date-picker-header-arrow--border-color);
+          border-style: var(--nl-date-picker-header-arrow--border-style);
+          border-width: var(--nl-date-picker-header-arrow--border-width);
+          background-color: transparent;
+        }
+      }
+  
+      .react-calendar__navigation__arrow,
+      .react-calendar__navigation__label {
+        color: var(--nl-date-picker-navigation-arrow--color);
+  
+        &:enabled:hover,
+        &:enabled:focus-visible {
+          background: var(--nl-date-picker-navigation-hover-bg-color);
+          box-shadow: var(--nl-date-picker-navigation-arrow-focus--box-shadow);
+        }
+  
+        &:focus-visible {
+          outline-width: var(--nl-date-picker-focus--outline-width);
+          outline-style: var(--nl-date-picker-focus--outline-style);
+          outline-color: var(--nl-date-picker-focus--outline-color);
+        }
+      }
+  
+      .react-calendar__viewContainer {
+        background: var(--nl-date-picker-view-container-color);
+      }
+  
+      .react-calendar__navigation__label {
+        font-family: var(--primary-font);
+        font-size: 1rem;
+        font-weight: var(--weight-regular);
+      }
+  
+      .react-calendar__navigation__arrow {
+        font-size: 1.875rem;
+      }
+  
+      .react-calendar__tile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--primary-font);
+        padding: 0.625rem 0.5rem;
+        font-size: 0.875rem;
+        color: var(--nl-date-picker-tile--color);
+        background-color: var(--nl-date-picker-tile--bg-color);
+        border-radius: var(--nl-date-picker-tile--border-radius);
+  
+        &:enabled:hover {
+          --nl-date-picker-tile--bg-color: var(--nl-date-picker-tile-hover--bg-color);
+          --nl-date-picker-tile--color: var(--nl-date-picker-tile-hover--color);
+        }
+  
+        &:focus-visible {
+          outline-width: var(--nl-date-picker-focus--outline-width);
+          outline-style: var(--nl-date-picker-focus--outline-style);
+          outline-color: var(--nl-date-picker-focus--outline-color);
+          outline-offset: -0.125rem;
+        }
+      }
+  
+      .react-calendar__month-view__weekdays {
+        text-transform: none;
+        padding: 0;
+      }
+  
+      .react-calendar__month-view__weekdays,
+      .react-calendar__month-view__weekdays__weekday {
+        font-weight: var(--weight-regular);
+        font-size: 0.875rem;
+        background: var(--nl-date-picker-navigation--bg-color);
+        color: var(--nl-date-picker-weekday--color);
+        line-height: 1.25rem;
+  
+        abbr {
+          text-decoration: none;
+        }
+      }
+  
+      .react-calendar__tile--active {
+        --nl-date-picker-tile--color: var(--nl-date-picker-tile-active-hover--color);
+        --nl-date-picker-tile-hover--bg-color: var(--nl-date-picker-tile-active-hover--bg-color);
+  
+        abbr {
+          font-weight: var(--weight-regular);
+        }
+      }
+  
+      .react-calendar__tile--active,
+      .react-calendar__tile--hasActive {
+        color: var(--nl-date-picker-tile-active-hover--color);
+        background-color: var(--nl-date-picker-tile-active-hover--bg-color);
+        overflow: hidden;
+      }
+  
+      .react-calendar__tile--rangeEnd,
+      .react-calendar__tile--rangeStart {
+        background-color: var(--nl-date-picker-tile-active--bg-color);
+        color: var(--nl-date-picker-tile-active--color);
+  
+        &.react-calendar__tile--hover {
+          background-color: var(--nl-date-picker-tile-hover--bg-color);
+          color: var(--nl-date-picker-tile-active--color);
+        }
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: var(--nl-date-picker-tile-active-hover--bg-color);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -2;
+        }
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: var(--nl-date-picker-tile-active--bg-color);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: var(--nl-date-picker-tile--border-radius);
+        }
+      }
+  
+      .react-calendar__tile:not(.react-calendar__month-view__days__day) {
+        border-radius: 62.5rem;
+      }
+  
+      //styles for the curved range select across weekends start
+  
+      .react-calendar__tile--range,
+      .react-calendar__tile--hover {
+        position: relative;
+        overflow: visible !important;
+        z-index: 1;
+        border-radius: 0;
+        &.react-calendar__tile--rangeStart {
+          border-radius: var(--nl-date-picker-tile--border-radius);
+          &::before {
+            @include tile-border-radius(left, var(--nl-date-picker-tile--border-radius));
+          }
+        }
+        &.react-calendar__tile--rangeEnd {
+          border-radius: var(--nl-date-picker-tile--border-radius);
+          &::before {
+            @include tile-border-radius(right, var(--nl-date-picker-tile--border-radius));
+          }
+        }
+        &.react-calendar__tile--hoverEnd {
+          @include tile-border-radius(right, var(--nl-date-picker-tile--border-radius));
+        }
+        &.react-calendar__tile--hoverStart {
+          @include tile-border-radius(left, var(--nl-date-picker-tile--border-radius));
+        }
+  
+        &:nth-child(7n) {
+          @include tile-border-radius(right, var(--nl-date-picker-tile--border-radius));
+          &.react-calendar__tile--rangeStart {
+            &::before {
+              @include tile-border-radius(right, var(--nl-date-picker-tile--border-radius));
+            }
+          }
+        }
+  
+        &:first-child,
+        &:nth-child(7n + 1) {
+          @include tile-border-radius(left, var(--nl-date-picker-tile--border-radius));
+          &.react-calendar__tile--range {
+            &::before {
+              @include tile-border-radius(left, var(--nl-date-picker-tile--border-radius));
+            }
+          }
+        }
+  
+        &:not(:nth-child(7n)) {
+          &.react-calendar__tile--rangeStart:has(+ .react-calendar__tile--hover) {
+            @include tile-border-radius(right, 0);
+          }
+          &.react-calendar__tile--hover + .react-calendar__tile--rangeStart {
+            @include tile-border-radius(left, 0);
+          }
+        }
+      }
+  
+      .react-calendar__tile--hover {
+        background: var(--nl-date-picker-tile-active-hover--bg-color);
+        border-color: var(--nl-date-picker-calendar--bg-color);
+      }
+      //styles for the curved range select across weekends ends
+  
+      .react-calendar__century-view__decades,
+      .react-calendar__decade-view__years,
+      .react-calendar__month-view__days,
+      .react-calendar__year-view__months {
+        padding: 0.375rem 0 0 0;
+      }
+  
+      .react-calendar__year-view__months__month,
+      .react-calendar__decade-view__years__year {
+        padding: 0.625rem 0.5rem;
+        margin-bottom: 0.875rem;
+      }
+  
+      .react-calendar__century-view__decades__decade,
+      .react-calendar__year-view__months__month,
+      .react-calendar__decade-view__years__year {
+        &.react-calendar__tile--hasActive {
+          background-color: var(--nl-date-picker-tile-active--bg-color);
+          color: var(--nl-date-picker-tile-active--color);
+        }
+      }
+  
+      .react-calendar__century-view__decades__decade {
+        margin-bottom: 0.875rem;
+      }
+  
+      .react-calendar__month-view__days__day {
+        font-size: 0.875rem;
+        font-weight: var(--weight-light);
+        margin-top: 0.25rem;
+  
+        abbr {
+          padding: 0.125rem 0;
+        }
+      }
+  
+      .react-calendar__month-view__days__day--neighboringMonth {
+        color: var(--nl-date-picker-tile-disabled--color);
+      }
+  
+      .react-calendar__navigation__label[disabled] {
+        background-color: var(--nl-date-picker-navigation--bg-color);
+        color: var(--nl-date-picker-navigation--color);
+      }
+    }
+
+    &-calendar-icon {
+      position: relative;
+      color: var(--nl-date-picker-calendar-icon--color);
+      z-index: 1;
+
+      width: 1.25rem;
+      height: 1.25rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover { --nl-date-picker-calendar-icon--color: var(--nl-date-picker-calendar-icon-hover--color) }
+
+    }
+
+    &.nl-date-picker-error:not(.react-date-picker--disabled, .react-daterange-picker--disabled) {
+      --nl-date-picker--color: var(--nl-date-picker-error--color);
+      --nl-date-picker--bg-color: var(--nl-date-picker-error--bg-color);
+      --nl-date-picker--border-radius: var(--nl-date-picker-error--border-radius);
+      --nl-date-picker--border-color: var(--nl-date-picker-error--border-color);
+      --nl-date-picker--border-width: var(--nl-date-picker-error--border-width);
+      --nl-date-picker--border-style: var(--nl-date-picker-error--border-style);
+      --nl-date-picker--box-shadow: var(--nl-date-picker-error--box-shadow);
+
+      .nl-calendar-icon {
+        fill: var(--nl-date-picker-error-icon-color);
+      }
+
+      &:hover {
+        --nl-date-picker--color: var(--nl-date-picker-error-hover--color);
+        --nl-date-picker--bg-color: var(--nl-date-picker-error-hover--bg-color);
+        --nl-date-picker--border-radius: var(--nl-date-picker-error-hover--border-radius);
+        --nl-date-picker--border-color: var(--nl-date-picker-error-hover--border-color);
+        --nl-date-picker--border-width: var(--nl-date-picker-error-hover--border-width);
+        --nl-date-picker--border-style: var(--nl-date-picker-error-hover--border-style);
+        --nl-date-picker--box-shadow: var(--nl-date-picker-error-hover--box-shadow);
+
+        .nl-calendar-icon {
+          fill: var(--nl-date-picker-error-hover-icon-color);
+        }
+      }
+
+      &:focus-visible {
+        --nl-date-picker--color: var(--nl-date-picker-error-focus--color);
+        --nl-date-picker--bg-color: var(--nl-date-picker-error-focus--bg-color);
+        --nl-date-picker--border-radius: var(--nl-date-picker-error-focus--border-radius);
+        --nl-date-picker--border-color: var(--nl-date-picker-error-focus--border-color);
+        --nl-date-picker--border-width: var(--nl-date-picker-error-focus--border-width);
+        --nl-date-picker--border-style: var(--nl-date-picker-error-focus--border-style);
+        --nl-date-picker--box-shadow: var(--nl-date-picker-error-focus--box-shadow);
+
+        .nl-calendar-icon {
+          fill: var(--nl-date-picker-error-focus-icon-color);
+        }
+      }
+
+      &.react-date-picker__calendar--open,
+      &.react-daterange-picker__calendar--open {
+        height: 0.125rem;
+      }
+    }
+
+    .react-date-picker__inputGroup__divider {
+      color: var(--nl-date-picker--color);
+    }
+
+    &:hover:not(.react-date-picker--disabled, .react-daterange-picker--disabled, .react-date-picker--open, .react-daterange-picker--open) {
+      --nl-date-picker--color: var(--nl-date-picker-hover--color);
+      --nl-date-picker--bg-color: var(--nl-date-picker-hover--bg-color);
+      --nl-date-picker--border-radius: var(--nl-date-picker-hover--border-radius);
+    }
+
+    .react-date-picker__inputGroup__input,
+    .react-daterange-picker__inputGroup__input {
+      &:invalid {
+        background: transparent;
+      }
+    }
+
+    .react-daterange-picker__inputGroup {
+      min-width: auto;
+      flex-grow: 0;
+
+      & + .react-daterange-picker__button {
+        margin-left: auto;
+      }
+    }
+
+    &.react-date-picker--open,
+    &.react-daterange-picker--open {
+      --nl-date-picker--color: var(--nl-date-picker-focus--color);
+      --nl-date-picker--bg-color: var(--nl-date-picker-focus--bg-color);
+      --nl-date-picker--border-color: var(--nl-date-picker-focus--border-color);
+
+      outline-color: var(--nl-date-picker-focus--outline-color);
+      outline-style: var(--nl-date-picker-focus--outline-style);
+      outline-width: var(--nl-date-picker-focus--outline-width);
+      outline-offset: var(--nl-date-picker-focus--outline-offset);
+
+      z-index: 99;
+    }
+
+    &.nl-date-picker-not-focused:not(.nl-date-picker-has-value) {
+      .react-date-picker__inputGroup,
+      .react-daterange-picker__inputGroup,
+      .react-daterange-picker__range-divider,
+      .react-date-picker__inputGroup__divider {
+        visibility: hidden;
+      }
+    }
+
+    &.react-date-picker--disabled,
+    &.react-daterange-picker--disabled {
+      --nl-date-picker--color: var(--nl-date-picker-disabled--color);
+      --nl-date-picker--bg-color: var(--nl-date-picker-disabled--bg-color);
+      --nl-date-picker--border-radius: var(--nl-date-picker-disabled--border-radius);
+      --nl-date-picker--border-color: var(--nl-date-picker-disabled--border-color);
+      --nl-date-picker--border-width: var(--nl-date-picker-disabled--border-width);
+      --nl-date-picker--border-style: var(--nl-date-picker-disabled--border-style);
+      --nl-date-picker--box-shadow: var(--nl-date-picker-disabled--box-shadow);
+      --nl-date-picker-tile--bg-color: var(--nl-date-picker-tile-disabled--bg-color);
+      --nl-date-picker-tile--color: var(--nl-date-picker-tile-disabled--color);
+
+      &:active {
+        --nl-date-picker-tile-disabled--bg-color: var(--nl-date-picker-tile-active-disabled--bg-color);
+        --nl-date-picker-tile-disabled--color: var(--nl-date-picker-tile-active-disabled--color);
+      }
+
+      cursor: not-allowed;
+
+      input,
+      button {
+        cursor: not-allowed;
+      }
+
+      .react-date-picker__inputGroup__input,
+      .react-daterange-picker__inputGroup__input,
+      .react-date-picker__inputGroup__leadingZero,
+      .react-daterange-picker__inputGroup__leadingZero {
+        color: var(--nl-date-picker-disabled--color);
+        -webkit-text-fill-color: var(--nl-date-picker-disabled--color);
+      }
+
+      .react-date-picker__inputGroup__divider,
+      .react-date-picker__inputGroup__leadingZero {
+        -webkit-text-fill-color: var(--nl-date-picker-disabled--color);
+      }
+
+      .react-date-picker__inputGroup__divider {
+        padding-right: 0.25rem;
+      }
+
+      .nl-calendar-icon {
+        fill: var(--nl-date-picker-disabled-icon-color);
+      }
+
+      &::placeholder {
+        color: var(--nl-date-picker-disabled--color);
+      }
+    }
+
+    .react-date-picker__wrapper,
+    .react-daterange-picker__wrapper {
+      gap: 0.5rem;
+      border: none;
+      padding: 0 0.875rem;
+      height: 100%;
+    }
+
+    .react-daterange-picker__wrapper {
+      align-items: center;
+    }
+
+    .react-date-picker__inputGroup__input:invalid {
+      background: transparent;
+    }
+
+    .react-date-picker__inputGroup__input,
+    .react-date-picker__range-divider,
+    .react-date-picker__inputGroup__leadingZero,
+    .react-date-picker__inputGroup__input::placeholder,
+    .react-daterange-picker__inputGroup__input,
+    .react-daterange-picker__range-divider,
+    .react-daterange-picker__inputGroup__leadingZero,
+    .react-daterange-picker__inputGroup__input::placeholder {
+      font-size: 1rem;
+      font-weight: var(--weight-light);
+      color: var(--nl-date-picker--color);
+      line-height: 1.5rem;
+    }
+
+    .react-daterange-picker__range-divider {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 0;
+    }
+
+    .react-date-picker__calendar-button,
+    .react-daterange-picker__calendar-button {
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .react-daterange-picker__calendar-button {
+      height: 100%;
+    }
+
+    .react-date-picker__inputGroup__year,
+    .react-daterange-picker__inputGroup__year {
+      min-width: 2rem;
+    }
+
+    &.nl-date-picker-today-highlight .react-calendar__tile--now {
+      background-color: var(--nl-date-picker-tile-today-mark--bg-color);
+      color: var(--nl-date-picker-tile-today-mark--color);
+
+      &:enabled:hover {
+        --nl-date-picker-tile-today-mark--bg-color: var(--nl-date-picker-tile-today-mark-hover--bg-color);
+        --nl-date-picker-tile-today-mark--color: var(--nl-date-picker-tile-today-mark-hover--color);
+      }
+
+      &:disabled {
+        --nl-date-picker-tile-today-mark--bg-color: var(--nl-date-picker-tile-today-mark-disabled--bg-color);
+        --nl-date-picker-tile-today-mark--color: var(--nl-date-picker-tile-today-mark-disabled--color);
+      }
+    }
+  }
+
+  .react-daterange-picker__clear-button,
+  .react-date-picker__clear-button {
+    .react-daterange-picker__clear-button__icon,
+    .react-date-picker__clear-button__icon {
+      stroke: var(--nl-date-picker--color);
+    }
+
+    &:hover,
+    &:focus-visible {
+      .react-daterange-picker__clear-button__icon,
+      .react-date-picker__clear-button__icon {
+        stroke: var(--nl-date-picker--color);
+      }
+    }
+  }
+}

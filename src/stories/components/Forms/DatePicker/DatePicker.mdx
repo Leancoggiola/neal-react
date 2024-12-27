@@ -1,0 +1,19 @@
+import { ArgTypes, Canvas, Meta, Source } from '@storybook/blocks';
+import * as DatePickerStories from './DatePicker.stories';
+
+<Meta of={DatePickerStories} name="Overview" />
+
+# NL - Form - Date Picker component
+
+The `NlDatePicker` component is part of the Form components redesign on the library.
+It goes wrapped under the [NlFromWrapper](?path=/docs/components-forms-form-wrapper--overview) that share the information between the other components like `NlLabel` and `NlErrorMessage`.
+
+The follow example include the use of `NlLabel`, `NlDatePicker` and `NlErrorMessage` for error message display
+
+<Canvas of={DatePickerStories.DatePickerDefault} layout="fullscreen" withToolbar />
+
+## Import
+
+<Source dark code={`import { NlDatePicker } from 'neal-react';`} />
+### Props
+<ArgTypes of={DatePickerStories} />

@@ -26,7 +26,8 @@
     }
   }
 
-  &.nl-label-text-select {
+  &.nl-label-text-select,
+  &.nl-label-text-date {
     display: inline-block;
     margin-bottom: 0.375rem;
   }

@@ -16,6 +16,7 @@
 @use './components/text-link.map' as textLink;
 
 // Form Components
+@use './components/form/date-picker.map' as formDatePicker;
 @use './components/form/error-message.map' as formErrorMessage;
 @use './components/form/input.map' as formInput;
 @use './components/form/label.map' as formLabel;
@@ -43,6 +44,7 @@ $variables:
     progressMap.$variables,
     textLink.$variables,
     
+    formDatePicker.$variables,
     formErrorMessage.$variables,
     formInput.$variables,
     formLabel.$variables,

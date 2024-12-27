@@ -1,0 +1,28 @@
+@use '../../../common/common' as v;
+
+$variables: (
+  // Select btn
+  'date-picker--color': #{v.$grey-300},
+  'date-picker--bg-color': #{v.$grey-950},
+  'date-picker--border-color': #{v.$grey-700},
+
+  'date-picker-hover--color': #{v.$grey-350},
+  'date-picker-hover--bg-color': #{v.$grey-900},
+  'date-picker-hover--border-color': #{v.$grey-700},
+
+  'date-picker-focus--color': #{v.$grey-300},
+  'date-picker-focus--bg-color': #{v.$grey-950},
+  'date-picker-focus--border-color': #{v.$grey-700},
+
+  'date-picker-focus--outline-style': solid,
+  'date-picker-focus--outline-color': #{v.$purple-500},
+  'date-picker-focus--outline-width': 0.125rem,
+  'date-picker-focus--outline-offset': 0,
+
+  'date-picker-calendar-icon--color': #{v.$grey-300},
+  'date-picker-calendar-icon-hover--color': #{v.$grey-500},
+
+  'date-picker-calendar--color': #{v.$grey-100},
+  'date-picker-calendar--bg-color': #{v.$grey-950},
+  'date-picker-calendar--border-color': #{v.$grey-700},
+)
